@@ -34,8 +34,8 @@
                         <div>
                             <div class="text-center mb-4">
                                 <a href="index.html" class="">
-                                    <img src="assets/images/logo-dark.png" alt="" height="25" class="auth-logo logo-dark mx-auto">
-                                    <img src="assets/images/logo-light.png" alt="" height="25" class="auth-logo logo-light mx-auto">
+                                    <img src="assets/images/logofinalsite.png" alt="" height="100" class="auth-logo logo-dark mx-auto">
+                                    <img src="assets/images/logofinalsite.png" alt="" height="100" class="auth-logo logo-light mx-auto">
                                 </a>
                             </div>
                             <div class="row justify-content-center align-items-center pt-4">

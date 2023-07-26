@@ -303,7 +303,7 @@ session_start();
                                     <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg"
                                         alt="Header Avatar">
                                     <h6 class="text-uppercase mb-0 mt-2 pt-1"> <?php echo $_SESSION["usuario_nome"]; ?></h6>
-                                    <p class="text-muted font-size-13">Cargo</p>
+                                    <p class="text-muted font-size-13">Founder</p>
                                 </a>
                                 <div class="dropdown-menu">
                                     <!-- item-->
@@ -318,7 +318,7 @@ session_start();
 
                             <div class="user-graph mt-5 pt-1">
                                 <div id="header-chart" class="apex-charts"></div>
-                                <h6 class="mt-1">Reciclado no mês R$34,652</h6>
+                                <h6 class="mt-1">Budget $34,652</h6>
                             </div>
                         </div>
 
@@ -333,20 +333,14 @@ session_start();
                                 </a>
                             </li>
 
-                           <li>
-                                <a href="apps-chat.html" class=" waves-effect">
-                                    <i class="ri-chat-voice-line"></i>
-                                    <span>Mapa da Cidade</span>
-                                </a>
-                            </li>
                             <li>
                                 <a href="apps-chat.html" class=" waves-effect">
                                     <i class="ri-chat-voice-line"></i>
-                                    <span>Mapa de Coleta</span>
+                                    <span>Chat</span>
                                 </a>
                             </li>
 
-                            <!-- <li>
+                            <li>
                                 <a href="apps-todo.html" class=" waves-effect">
                                     <i class="ri-task-line"></i>
                                     <span>Todo</span>
@@ -359,30 +353,30 @@ session_start();
                                     <span>Project</span>
                                 </a>
                             </li>
-                            -->
+                
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-mail-send-line"></i>
-                                    <span>Cadastro Residuos</span>
+                                    <span>Email</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-inbox.html">Tipo de Residuo</a></li>
-                                    <li><a href="email-read.html">Nome de Residuo</a></li>
+                                    <li><a href="email-inbox.html">Inbox</a></li>
+                                    <li><a href="email-read.html">Read Email</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-file-text-line"></i>
-                                    <span>Cadastro de Usuarios</span>
+                                    <span>Invoice</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="invoice.html">Colaboradores</a></li>
-                                    <li><a href="invoice-detail.html">Outro Cadastro</a></li>
+                                    <li><a href="invoice.html">Invoices</a></li>
+                                    <li><a href="invoice-detail.html">Invoice Detail</a></li>
                                 </ul>
                             </li>
 
-                            <!--<li>
+                            <li>
                                 <a href="calendar.html" class=" waves-effect">
                                     <i class="ri-calendar-2-line"></i>
                                     <span>Calendar</span>
@@ -419,13 +413,13 @@ session_start();
                                     </li>
                                 </ul>
                             </li>
-                            -->
-                            <li class="menu-title">Relatórios</li>
+
+                            <li class="menu-title">Pages</li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-account-circle-line"></i>
-                                    <span>Exportar</span>
+                                    <span>Authentication</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="auth-login.html">Login</a></li>
@@ -438,7 +432,7 @@ session_start();
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-pages-line"></i>
-                                    <span>Importar</span>
+                                    <span>Extra Pages</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="pages-starter.html">Starter Page</a></li>
@@ -452,7 +446,7 @@ session_start();
                                 </ul>
                             </li>
 
-                            <!--<li class="menu-title">Components</li>
+                            <li class="menu-title">Components</li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -582,7 +576,7 @@ session_start();
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>-->
+                            </li>
 
                         </ul>
                     </div>

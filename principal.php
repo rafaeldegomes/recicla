@@ -1,9 +1,13 @@
 <?php 
 session_start();
-require_once "footer.php";
-session_start();
+
 $id = $_SESSION["usuario_id"];
-$nome = $_SESSION["nome"];
+if(empty($id)){
+    header("Location: index.php");
+    
+}else{
+    require_once "footer.php";
+
 ?>
 
             <!-- ============================================================== -->
@@ -43,5 +47,6 @@ $nome = $_SESSION["nome"];
 <?php 
 
 require_once "header.php";
-
+echo $nome = $_SESSION["nome"];
+}
 ?>

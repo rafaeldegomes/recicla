@@ -6,7 +6,6 @@ if (empty($id)) {
     header("Location: index.php");
 } else {
     require_once "footer.php";
-    require_once "controller/conecta.php";
 ?>
 
     <!-- ============================================================== -->
@@ -34,18 +33,6 @@ if (empty($id)) {
 
                             </div>
                         </div>
-                        <?php
-
-                        // Consulta SQL para contar os registros
-                        $query_total_residuos = "SELECT COUNT(*) as total FROM residuos";
-
-                        $result = $conn->query($query_total_residuos);
-
-                        // Obtendo o número de registros
-                        $row = $result->fetch_assoc();
-                        $total = $row['total'];
-
-                        ?>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card">
@@ -53,7 +40,7 @@ if (empty($id)) {
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
                                                 <p class="text-truncate mb-2">Residuos cadastrados</p>
-                                                <h4 class="mt-2 mb-0"><?php echo $total; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> 10%</sup></h4>
+                                                <h4 class="mt-2 mb-0">9 <span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> 10%</sup></h4>
                                             </div>
 
                                         </div>
@@ -206,11 +193,11 @@ if (empty($id)) {
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Resíduos Cadastrados</h4>
-                                <!--<p class="card-title-desc">
+                                <h4 class="card-title">Responsive Table</h4>
+                                <p class="card-title-desc">
                                     Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>
                                     to make them scroll horizontally on small devices (under 768px).
-                                </p>-->
+                                </p>
 
                                 <div class="table-responsive">
                                     <table class="table mb-0">
@@ -226,21 +213,20 @@ if (empty($id)) {
                                                 <th>Classe Risco Principal</th>
                                                 <th>Classe Risco Sub</th>
                                                 <th>Número Risco</th>
+                                                <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
-
-
-
                                             <?php
 
-
+                                            require_once "controller/conecta.php";
 
                                             // Consulta SQL para buscar os dados
                                             $query = "SELECT id_residuo, nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco FROM residuos";
 
                                             $result = $conn->query($query);
+
+
                                             while ($row = $result->fetch_assoc()) {
                                                 echo "<tr>";
                                                 echo "<td>" . $row['id_residuo'] . "</td>";
@@ -263,8 +249,14 @@ if (empty($id)) {
                                                     </div>
                                                 </td>
                                             <?php
+                                                echo "</tr>";
                                             }
+
+                                            $mysqli->close();
                                             ?>
+
+
+
                                         </tbody>
                                     </table>
                                 </div>

@@ -13,9 +13,10 @@ $classe_risco_principal = $_POST['classe_risco_principal'];
 $classe_risco_sub = $_POST['classe_risco_sub'];
 $numero_risco = $_POST['numero_risco'];
 $grupo_embalagem = $_POST['grupo_embalagem'];
+$status = $_POST['status'];
 
 // Prepare e execute a query
-$query = "INSERT INTO residuos (nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco, grupo_embalagem) VALUES ('$nome', '$tipo_residuo', '$categoria', '$tecnologia_tratamento', '$classe', '$unidade_medida', '$classe_risco_principal', '$classe_risco_sub', '$numero_risco', '$grupo_embalagem')";
+$query = "INSERT INTO residuos (nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco, grupo_embalagem,status) VALUES ('$nome', '$tipo_residuo', '$categoria', '$tecnologia_tratamento', '$classe', '$unidade_medida', '$classe_risco_principal', '$classe_risco_sub', '$numero_risco', '$grupo_embalagem', '$status')";
 
 if ($conn->query($query) === TRUE) {
     header('Location: ../residuos.php');

@@ -34,6 +34,154 @@ if (empty($id)) {
 
                             </div>
                         </div>
+                        <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="myExtraLargeModalLabel">Cadastrar novo Resíduo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="controller/cadastra_residuo.php" method="POST">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome comun do resíduo</label>
+                                                    <div class="col-sm-10">
+                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Categoria</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Tecnologia de Tratamento</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="tecnologia_tratamento" id="tecnologia_tratamento">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Status</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="statusresiduo" id="statusresiduo">
+                                                            <option selected="">Selecione</option>
+                                                            <option value="Ativo">Ativo</option>
+                                                            <option value="Inativo">Inativo</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Classe</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="classe" id="classe">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Principal</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="classe_risco_principal" id="classe_risco_principal">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Subsidiário</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="classe_risco_sub" id="classe_risco_sub">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Numero de Risco</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="numero_risco" id="numero_risco">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Grupo de Embalagem</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="grupo_embalagem" id="grupo_embalagem">
+                                                            <option selected="">Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col">
+
+                                                </div>
+                                                <div class="col">
+                                                </div>
+                                                <div class="col" style="text-align: left;">
+                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
                         <?php
 
                         // Consulta SQL para contar os registros
@@ -67,141 +215,7 @@ if (empty($id)) {
 
                             </div>
                             <!--  Modal content for the above example -->
-                            <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="myExtraLargeModalLabel">Cadastrar novo Resíduo</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="controller/cadastra_residuo.php" method="POST">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <label for="example-text-input" class="col-sm-6 col-form-label">Nome comun do resíduo</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
 
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Categoria</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Tecnologia de Tratamento</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="tecnologia_tratamento" id="tecnologia_tratamento">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Classe</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="classe" id="classe">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Principal</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="classe_risco_principal" id="classe_risco_principal">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Subsidiário</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="classe_risco_sub" id="classe_risco_sub">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Numero de Risco</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="numero_risco" id="numero_risco">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <label class="col-sm-6 col-form-label">Grupo de Embalagem</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select" aria-label="Default select example" name="grupo_embalagem" id="grupo_embalagem">
-                                                                <option selected="">Open this select menu</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col">
-
-                                                    </div>
-                                                    <div class="col">
-                                                    </div>
-                                                    <div class="col" style="text-align: left;">
-                                                        <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div><!-- /.modal -->
                         </div>
                         <div class="card">
                             <div class="card-body">
@@ -216,16 +230,13 @@ if (empty($id)) {
                                     <table class="table mb-0">
                                         <thead>
                                             <tr>
-                                                <th>ID Resíduo</th>
                                                 <th>Nome</th>
                                                 <th>Tipo Resíduo</th>
                                                 <th>Categoria</th>
                                                 <th>Tecnologia Tratamento</th>
                                                 <th>Classe</th>
-                                                <th>Unidade Medida</th>
-                                                <th>Classe Risco Principal</th>
-                                                <th>Classe Risco Sub</th>
-                                                <th>Número Risco</th>
+                                                <th>Status</th>
+                                                <th>Opcoes</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -238,27 +249,26 @@ if (empty($id)) {
 
 
                                             // Consulta SQL para buscar os dados
-                                            $query = "SELECT id_residuo, nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco FROM residuos";
+                                            $query = "SELECT id_residuo, nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco,status FROM residuos";
 
                                             $result = $conn->query($query);
                                             while ($row = $result->fetch_assoc()) {
                                                 echo "<tr>";
-                                                echo "<td>" . $row['id_residuo'] . "</td>";
                                                 echo "<td>" . $row['nome'] . "</td>";
                                                 echo "<td>" . $row['tipo_residuo'] . "</td>";
                                                 echo "<td>" . $row['categoria'] . "</td>";
                                                 echo "<td>" . $row['tecnologia_tratamento'] . "</td>";
                                                 echo "<td>" . $row['classe'] . "</td>";
-                                                echo "<td>" . $row['unidade_medida'] . "</td>";
-                                                echo "<td>" . $row['classe_risco_principal'] . "</td>";
-                                                echo "<td>" . $row['classe_risco_sub'] . "</td>";
-                                                echo "<td>" . $row['numero_risco'] . "</td>"; ?>
+                                                echo "<td>" . $row['status'] . "</td>"; ?>
+
                                                 <td>
                                                     <div class="row">
                                                         <div class="col">
-                                                            <button type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-file-text-line"></i></button>
+                                                            <a href='tela_view_residuos.php?id_residuo=<?php echo $row["id_residuo"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-delete-bin-line"></i></a>
+
                                                             <button type="button" class="btn btn-primary waves-effect waves-light"><i class="ri-edit-line"></i></button>
-                                                            <button type="button" class="btn btn-danger waves-effect waves-light"><i class="ri-delete-bin-line"></i></button>
+
+                                                            <a href='controller/atualiza_status_residuo.php?id=<?php echo $row["id_residuo"]; ?>' type="button" class="btn btn-danger waves-effect waves-light"><i class="ri-delete-bin-line"></i></a>
                                                         </div>
                                                     </div>
                                                 </td>

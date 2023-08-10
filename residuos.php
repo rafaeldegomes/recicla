@@ -54,10 +54,8 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
-                                                            <option selected="">Open this select menu</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            <option selected="Reciclaveis">Reciclaveis</option>
+                                                            <option value="Reciclaveis">Reciclaveis</option>
                                                         </select>
                                                     </div>
 
@@ -70,10 +68,9 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Categoria</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
-                                                            <option selected="">Open this select menu</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            <option selected="">Não Reciclavel</option>
+                                                            <option value="Não Reciclavel">Não Reciclavel</option>
+                                                            
                                                         </select>
                                                     </div>
                                                 </div>
@@ -81,7 +78,7 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Tecnologia de Tratamento</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="tecnologia_tratamento" id="tecnologia_tratamento">
-                                                            <option selected="">Open this select menu</option>
+                                                            <option selected="Reciclagem">Reciclagem</option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
@@ -105,8 +102,8 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Classe</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="classe" id="classe">
-                                                            <option selected="">Open this select menu</option>
-                                                            <option value="1">One</option>
+                                                            <option selected="Classe I">Classe I </option>
+                                                            <option value="Classe I">Classe I</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
                                                         </select>
@@ -119,7 +116,7 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Principal</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="classe_risco_principal" id="classe_risco_principal">
-                                                            <option selected="">Open this select menu</option>
+                                                            <option selected="">1.1A - Substancias e Artigos com Risco de Explosao em Massa</option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
@@ -147,7 +144,7 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Numero de Risco</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="numero_risco" id="numero_risco">
-                                                            <option selected="">Open this select menu</option>
+                                                            <option selected="">2 - Desprendimento de Gás devido a pressao ou reacao quimica</option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
@@ -158,7 +155,7 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Grupo de Embalagem</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="grupo_embalagem" id="grupo_embalagem">
-                                                            <option selected="">Open this select menu</option>
+                                                            <option selected="">I - Substancias que apresentam auto risco</option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>

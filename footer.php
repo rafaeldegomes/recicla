@@ -351,10 +351,10 @@ session_start();
                             </a>
                         </li>
                         <li>
-                            <a href="apps-chat.html" class=" waves-effect">
+                            <a href="usuarios.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Usuários</span>
-                            </a>
+                            </a>ß
                         </li>
 
                         <!-- <li>

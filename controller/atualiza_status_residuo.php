@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
     $currentStatus = $row["status"];
 
     // Determine o novo status
-    $newStatus = ($currentStatus == 'ativo') ? 'inativo' : 'ativo';
+    $newStatus = ($currentStatus == 'Ativo') ? 'Inativo' : 'Ativo';
 
     // Atualize o status na tabela "residuos"
     $updateSql = "UPDATE residuos SET status = '$newStatus' WHERE id_residuo = '$id'";

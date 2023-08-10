@@ -62,14 +62,12 @@ if (empty($id)) {
                                             <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
-                                                    <option selected="">Open this select menu</option>
+                                                    <option selected="<?php echo $row['tipo_residuo'];?>"><?php echo $row['tipo_residuo'];?></option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
                                                 </select>
                                             </div>
-
-
                                         </div>
 
                                     </div>

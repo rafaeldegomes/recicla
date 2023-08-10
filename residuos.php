@@ -92,8 +92,7 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Status</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="statusresiduo" id="statusresiduo">
-                                                            <option selected="">Selecione</option>
-                                                            <option value="Ativo">Ativo</option>
+                                                            <option selected="Ativo">Ativo</option>
                                                             <option value="Inativo">Inativo</option>
                                                         </select>
                                                     </div>

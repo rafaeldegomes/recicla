@@ -353,7 +353,7 @@ session_start();
                         <li>
                             <a href="usuarios.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
-                                <span>Usuários</span>
+                                <span>Usuários</span    >
                             </a>ß
                         </li>
 

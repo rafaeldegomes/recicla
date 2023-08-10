@@ -36,33 +36,33 @@ if (empty($id)) {
                         </div>
 
                         <form action="salvar_usuario.php" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Digite o email" name="email">
-        </div>
-        <div class="form-group">
-            <label for="senha">Senha:</label>
-            <input type="password" class="form-control" id="senha" placeholder="Digite a senha" name="senha">
-        </div>
-        <div class="form-group">
-            <label for="foto">Foto:</label>
-            <input type="file" class="form-control" id="foto" name="foto">
-        </div>
-        <div class="form-group">
-            <label for="nivel">Nível:</label>
-            <input type="text" class="form-control" id="nivel" placeholder="Digite o nível" name="nivel">
-        </div>
-        <div class="form-group">
-            <label for="cargo">Cargo:</label>
-            <input type="text" class="form-control" id="cargo" placeholder="Digite o cargo" name="cargo">
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-    </form>
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Digite o email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha:</label>
+                                <input type="password" class="form-control" id="senha" placeholder="Digite a senha" name="senha">
+                            </div>
+                            <div class="form-group">
+                                <label for="foto">Foto:</label>
+                                <input type="file" class="form-control" id="foto" name="foto">
+                            </div>
+                            <div class="form-group">
+                                <label for="nivel">Nível:</label>
+                                <input type="text" class="form-control" id="nivel" placeholder="Digite o nível" name="nivel">
+                            </div>
+                            <div class="form-group">
+                                <label for="cargo">Cargo:</label>
+                                <input type="text" class="form-control" id="cargo" placeholder="Digite o cargo" name="cargo">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </form>
 
                     </div>
                 </div>

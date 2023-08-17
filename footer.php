@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="br">
 
 
 <!-- Mirrored from themesdesign.in/reactly/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jul 2023 16:13:10 GMT -->
@@ -38,10 +38,6 @@ session_start();
 
     <!-- Begin page -->
     <div id="layout-wrapper">
-
-
-
-
         <div class="pace-progress"></div>
         <header id="page-topbar">
             <div class="navbar-header">
@@ -294,7 +290,7 @@ session_start();
                             <a href="#" class="btn header-item" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg" alt="Header Avatar">
                                 <h6 class="text-uppercase mb-0 mt-2 pt-1"> <?php echo $_SESSION["usuario_nome"]; ?></h6>
-                                <p class="text-muted font-size-13">Cargo</p>
+                                <p class="text-muted font-size-13"><?php echo $_SESSION["cargo"]; ?></p>
                             </a>
                             <div class="dropdown-menu">
                                 <!-- item-->
@@ -332,7 +328,7 @@ session_start();
                             </a>
                         </li>
                         <li>
-                            <a href="apps-chat.html" class=" waves-effect">
+                            <a href="pontos_coleta.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Pontos de Coleta</span>
                             </a>
@@ -343,6 +339,7 @@ session_start();
                                 <span>Bairros</span>
                             </a>
                         </li>
+                        
                         <li class="menu-title">Cadastro Operacional</li>
                         <li>
                             <a href="apps-chat.html" class=" waves-effect">

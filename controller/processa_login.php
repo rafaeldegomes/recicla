@@ -8,7 +8,7 @@ require_once "conecta.php";
     $senha = md5($_POST["senha"]); // Criptografa a senha usando MD5
 
     // Consulta o banco de dados para verificar o usuário e seu nível
-    $query = "SELECT id_usuario, nome, nivel FROM usuarios WHERE email='$email' AND senha='$senha'";
+    $query = "SELECT * FROM usuarios WHERE email='$email' AND senha='$senha'";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) == 1) {
@@ -25,6 +25,7 @@ require_once "conecta.php";
             // Definir as variáveis da sessão com o ID e o nome do usuário
             $_SESSION["usuario_id"] = $row["id_usuario"];
             $_SESSION["usuario_nome"] = $row["nome"];
+            $_SESSION["cargo"] = $row["cargo"];
 
             
 

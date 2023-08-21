@@ -42,7 +42,8 @@ $sql = "UPDATE residuos SET
 WHERE id_residuo = $id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: tela_view_residuos.php?id_residuo=' . $id);
+    header('Location: residuos.php');
+    //header('Location: tela_view_residuos.php?id_residuo=' . $id);
     exit;  // Importante para garantir que o script pare de ser executado após o redirecionamento.
 } else {
     echo "Erro na atualização do registro: " . $conn->error;

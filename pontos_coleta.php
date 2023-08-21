@@ -8,6 +8,11 @@ if (empty($id)) {
     require_once "footer.php";
     require_once "controller/conecta.php";
 ?>
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -25,75 +30,11 @@ if (empty($id)) {
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                             <h4 class="mb-sm-0">Pontos de Coleta</h4>
-                            <style>
-    #map {
-      height: 400px;
-    }
-  </style>
-                            <div class="container mt-5">
-    <h2>Busca de Endereço</h2>
-    <div class="form-group">
-      <label for="addressInput">Digite o endereço:</label>
-      <input type="text" class="form-control" id="addressInput">
-    </div>
-    <button class="btn btn-primary" id="searchBtn">Buscar</button>
-    <div id="map" class="mt-4"></div>
-  </div>
 
-  <script>
-    let map, marker;
 
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8
-      });
 
-      marker = new google.maps.Marker({
-        map: map,
-        anchorPoint: new google.maps.Point(0, -29)
-      });
-
-      const input = document.getElementById('addressInput');
-      const autocomplete = new google.maps.places.Autocomplete(input);
-      autocomplete.bindTo('bounds', map);
-
-      autocomplete.addListener('place_changed', () => {
-        const place = autocomplete.getPlace();
-
-        if (!place.geometry) {
-          window.alert('Nenhum local foi encontrado para o endereço fornecido.');
-          return;
-        }
-
-        if (place.geometry.viewport) {
-          map.fitBounds(place.geometry.viewport);
-        } else {
-          map.setCenter(place.geometry.location);
-          map.setZoom(17);
-        }
-
-        marker.setPosition(place.geometry.location);
-        marker.setVisible(true);
-      });
-    }
-
-    document.getElementById('searchBtn').addEventListener('click', () => {
-      const input = document.getElementById('addressInput').value;
-      const geocoder = new google.maps.Geocoder();
-  
-      geocoder.geocode({ address: input }, (results, status) => {
-        if (status === 'OK' && results[0]) {
-          map.setCenter(results[0].geometry.location);
-          marker.setPosition(results[0].geometry.location);
-          marker.setVisible(true);
-        } else {
-          window.alert('Nenhum local foi encontrado para o endereço fornecido.');
-        }
-      });
-    });
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap" async defer></script>
+                            
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap" async defer></script>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -194,7 +135,7 @@ if (empty($id)) {
                                                 </div>
                                                 <div class="col">
 
-                                                <iframe src="teste.php" title="description"></iframe>
+                                                    <iframe src="teste.php" title="description"></iframe>
                                                 </div>
                                             </div>
                                             <hr>
@@ -224,6 +165,15 @@ if (empty($id)) {
                         $row = $result->fetch_assoc();
                         $total = $row['total'];
 
+                        // Consulta SQL para contar os registros
+                        $query_total_residuos2 = "SELECT COUNT(*) as total FROM ponto_coleta where id_usuario = '$id' and status = 'Inativo'";
+
+                        $result2 = $conn->query($query_total_residuos2);
+
+                        // Obtendo o número de registros
+                        $row2= $result2->fetch_assoc();
+                        $total2 = $row2['total'];
+
                         ?>
                         <div class="row">
                             <div class="col-md-6">
@@ -239,12 +189,26 @@ if (empty($id)) {
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-wrap pb-3 gap-3">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                                <p class="text-truncate mb-2">Residuos Inativos</p>
+                                                <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Inativos</sup></h4>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="col-md-6">
 
-                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Ponto de Coleta</button>
+                                <a href="ponto_coleta_cadastro.php"><button type="button" class="btn btn-primary waves-effect waves-light" >Cadastrar novo Ponto de Coleta</button></a>
 
                             </div>
+                            <br><br><br>
                             <!--  Modal content for the above example -->
 
                         </div>

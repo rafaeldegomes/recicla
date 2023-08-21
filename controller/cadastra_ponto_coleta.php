@@ -6,7 +6,7 @@ require_once "conecta.php";
 $nome = $_POST['nome'];
 $bairro = $_POST['bairro'];
 $statusresiduo = $_POST['statusresiduo'];
-$endereco = $_POST['endereco'];
+$endereco = $_POST['addressInput'];
 $id = $_POST['id_usuario'];
 
 
@@ -27,7 +27,7 @@ if ($conn->query($query) === TRUE) {
     
         $sql = "INSERT INTO horarios_coleta (dia, hora_inicio, hora_fim , id_ponto_coleta) VALUES ('$dia', '$hora_inicio', '$hora_fim', ' $ultimo_id')";
         if ($conn->query($sql) === TRUE) {
-            echo "inserido no banco";
+            header('Location: ../pontos_coleta.php');
         } else {
             echo "Erro ao inserir: " . $conn->error;
         }

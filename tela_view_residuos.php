@@ -184,7 +184,7 @@ if (empty($id)) {
                                         </div>
                                         <div class="col" style="text-align: left;">
                                             <a href='residuos.php' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-delete-bin-line"></i> Voltar</a>
-                                            <button type="submit" onclick="teste()" class="btn btn-primary waves-effect waves-light"><i class="ri-delete-bin-line"></i> Alterar</button>
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light"><i class="ri-delete-bin-line"></i> Alterar</button>
                                             <a href='gerar_pdf.php' type="button" class="btn btn-info waves-effect waves-light"><i class="ri-delete-bin-line"></i> Gerar PDF</a>
 
 

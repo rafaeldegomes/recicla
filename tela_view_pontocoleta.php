@@ -10,6 +10,11 @@ if (empty($id)) {
     require_once "footer.php";
     require_once "controller/conecta.php";
 ?>
+ <style>
+        #map {
+            height: 400px;
+        }
+    </style>
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -63,8 +68,9 @@ if (empty($id)) {
                                         <div class="col">
                                             <label class="col-sm-6 col-form-label">Endereço</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" type="text" name="endereco" id="endereco" value="<?php echo $row['endereco']; ?>" placeholder="Digite o nome do Residuo" id="example-text-input">
-
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="addressInput" name="addressInput" placeholder="Digite o Endereço" value="<?php echo $row['endereco']; ?>">
+                                                </div>
                                             </div>
 
 
@@ -101,43 +107,43 @@ if (empty($id)) {
                                         <div class="col">
                                             <label class="col-sm-6 col-form-label">Horário de Coleta</label>
 
-                                           
+
                                             <div class="col-sm-10">
 
-                                            <?php
-                                            // Consulta SQL para buscar os dados
-                                            $query = "SELECT * FROM horarios_coleta where id_ponto_coleta = 1";
+                                                <?php
+                                                // Consulta SQL para buscar os dados
+                                                $query = "SELECT * FROM horarios_coleta where id_ponto_coleta = $id_residuo";
 
-                                            $result = $conn->query($query);
-                                            while ($row = $result->fetch_assoc()) {
-                                                
-                                           
-                                            ?>
-                                                <div id="entry-form">
-                                                    <br>
-                                                    <div class="form-group">
-                                                        <label>Dia:</label>
-                                                        <select class="form-select" aria-label="Default select example" name="dia[]" id="dia[]">
-                                                            <option value="<?php echo $row['dia']; ?>"><?php echo $row['dia']; ?></option>
-                                                            <option value="Terca">Terça</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Hora de Início:</label>
-                                                        <input type="time" name="hora_inicio[]" class="form-control" value="<?php echo $row['hora_inicio']; ?>" required>
-                                                    </div>
+                                                $result = $conn->query($query);
+                                                while ($row = $result->fetch_assoc()) {
 
-                                                    <div class="form-group">
-                                                        <label>Residuo :</label>
-                                                        <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
-                                                            <option selected="<?php echo $row['hora_fim']; ?>"><?php echo $row['hora_fim']; ?></option>
-                                                            <option value="Terca">Lata</option>
-                                                        </select>
+
+                                                ?>
+                                                    <div id="entry-form">
+                                                        <br>
+                                                        <div class="form-group">
+                                                            <label>Dia:</label>
+                                                            <select class="form-select" aria-label="Default select example" name="dia[]" id="dia[]">
+                                                                <option value="<?php echo $row['dia']; ?>"><?php echo $row['dia']; ?></option>
+                                                                <option value="Terca">Terça</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Hora de Início:</label>
+                                                            <input type="time" name="hora_inicio[]" class="form-control" value="<?php echo $row['hora_inicio']; ?>" required>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Residuo :</label>
+                                                            <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
+                                                                <option selected="<?php echo $row['hora_fim']; ?>"><?php echo $row['hora_fim']; ?></option>
+                                                                <option value="Terca">Lata</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            <?php
-                                            }
-                                            ?>
+                                                <?php
+                                                }
+                                                ?>
                                                 <br>
                                                 <button type="button" class="btn btn-secondary" id="add-entry">Adicionar mais dias e horários</button>
                                                 <br>
@@ -145,7 +151,29 @@ if (empty($id)) {
                                             </div>
                                         </div>
                                         <div class="col">
+                                            <div class="col-sm-10">
 
+
+                                                <br>
+                                                <!--<button class="btn btn-primary" id="searchBtn">Buscar</button>-->
+                                                <label class="col-sm-12 col-form-label">Visualizar Ponto de Coleta no Mapa</label>
+                                                <br><br>
+                                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                Visualizar no Mapa
+                                                            </button>
+                                                        </h2>
+                                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                            <div class="accordion-body">
+                                                                <div id="map" class="mt-4"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
 
                                         </div>
                                     </div>
@@ -175,26 +203,67 @@ if (empty($id)) {
 
         <!-- end main content-->
         <script>
-            function teste() {
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        )
+            let map, marker;
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {
+                        lat: -34.397,
+                        lng: 150.644
+                    },
+                    zoom: 8
+                });
+
+                marker = new google.maps.Marker({
+                    map: map,
+                    anchorPoint: new google.maps.Point(0, -29)
+                });
+
+                const input = document.getElementById('addressInput');
+                const autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.bindTo('bounds', map);
+
+                autocomplete.addListener('place_changed', () => {
+                    const place = autocomplete.getPlace();
+
+                    if (!place.geometry) {
+                        window.alert('Nenhum local foi encontrado para o endereço fornecido.');
+                        return;
                     }
-                })
+
+                    if (place.geometry.viewport) {
+                        map.fitBounds(place.geometry.viewport);
+                    } else {
+                        map.setCenter(place.geometry.location);
+                        map.setZoom(17);
+                    }
+
+                    marker.setPosition(place.geometry.location);
+                    marker.setVisible(true);
+                });
             }
+
+            document.getElementById('searchBtn').addEventListener('click', () => {
+                const input = document.getElementById('addressInput').value;
+                const geocoder = new google.maps.Geocoder();
+
+                geocoder.geocode({
+                    address: input
+                }, (results, status) => {
+                    if (status === 'OK' && results[0]) {
+                        map.setCenter(results[0].geometry.location);
+                        marker.setPosition(results[0].geometry.location);
+                        marker.setVisible(true);
+                    } else {
+                        window.alert('Nenhum local foi encontrado para o endereço fornecido.');
+                    }
+                });
+            });
         </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap" async defer></script>
+
+
+
         <script>
             document.getElementById('add-entry').addEventListener('click', function() {
                 const entryForm = document.getElementById('entry-form');

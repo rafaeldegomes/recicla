@@ -191,6 +191,14 @@ if (empty($id)) {
                         $row = $result->fetch_assoc();
                         $total = $row['total'];
 
+                        $query_total_residuos2 = "SELECT COUNT(*) as total FROM residuos where id_usuario = '$id' and status = 'Inativo'";
+
+                        $result2 = $conn->query($query_total_residuos2);
+
+                        // Obtendo o número de registros
+                        $row2 = $result2->fetch_assoc();
+                        $total2 = $row2['total'];
+
                         ?>
                         <div class="row">
                             <div class="col-md-6">
@@ -198,7 +206,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Residuos cadastrados</p>
+                                                <p class="text-truncate mb-2">Residuos Ativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Ativos</sup></h4>
                                             </div>
 
@@ -206,14 +214,27 @@ if (empty($id)) {
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-wrap pb-3 gap-3">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                                <p class="text-truncate mb-2">Residuos Inativos</p>
+                                                <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Inativos</sup></h4>
+                                            </div>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="col-md-6">
 
                                 <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Residuo</button>
 
                             </div>
                             <!--  Modal content for the above example -->
-
+                            <br><br>    <br>
                         </div>
                         <div class="card">
                             <div class="card-body">

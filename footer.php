@@ -335,6 +335,18 @@ session_start();
                             </a>
                         </li>
                         <li>
+                            <a href="mapa_coleta.php" class=" waves-effect">
+                                <i class="ri-chat-voice-line"></i>
+                                <span>Mapa de Coletas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="entrega_residuos.php" class=" waves-effect">
+                                <i class="ri-chat-voice-line"></i>
+                                <span>Entrega de Resíduos</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="apps-chat.html" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Bairros</span>

@@ -155,7 +155,7 @@ if (empty($id)) {
 
 
                                                 <br>
-                                                <!--<button class="btn btn-primary" id="searchBtn">Buscar</button>-->
+                                                <button class="btn btn-primary" id="searchBtn">Buscar</button>
                                                 <label class="col-sm-12 col-form-label">Visualizar Ponto de Coleta no Mapa</label>
                                                 <br><br>
                                                 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -253,6 +253,7 @@ if (empty($id)) {
                     if (status === 'OK' && results[0]) {
                         map.setCenter(results[0].geometry.location);
                         marker.setPosition(results[0].geometry.location);
+                        alert(results[0].geometry.location);
                         marker.setVisible(true);
                     } else {
                         window.alert('Nenhum local foi encontrado para o endereço fornecido.');

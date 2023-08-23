@@ -54,14 +54,17 @@ if (empty($id)) {
                                         <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
                                         <label for="example-text-input" class="col-sm-6 col-form-label">Nome Ponto Coleta</label>
                                         <div class="col-sm-10">
-                                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                            <input class="form-control" type="text" name="nome" id="nome" required placeholder="Digite o nome do Residuo" id="example-text-input">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <label class="col-sm-6 col-form-label">Endereço</label>
                                         <div class="col-sm-10">
-                                        <div class="form-group">
+                                            <div class="form-group">
                                                 <input type="text" class="form-control" id="addressInput" name="addressInput" placeholder="Digite o Endereço">
+                                                <input type="hidden" class="form-control" id="latitude" name="latitude">
+                                                <input type="hidden" class="form-control" id="longitude" name="longitude">
+
                                             </div>
                                         </div>
 
@@ -155,9 +158,9 @@ if (empty($id)) {
 
                                         <div class="col-sm-10">
 
-                                           
+
                                             <br>
-                                            <!--<button class="btn btn-primary" id="searchBtn">Buscar</button>-->
+                                            <button class="btn btn-primary" id="searchBtn">Buscar</button>
                                             <label class="col-sm-12 col-form-label">Visualizar Ponto de Coleta no Mapa</label>
                                             <br><br>
                                             <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -169,12 +172,12 @@ if (empty($id)) {
                                                     </h2>
                                                     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                                         <div class="accordion-body">
-                                                        <div id="map" class="mt-4"></div>
-                                                            </div>
+                                                            <div id="map" class="mt-4"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -250,6 +253,15 @@ if (empty($id)) {
                     if (status === 'OK' && results[0]) {
                         map.setCenter(results[0].geometry.location);
                         marker.setPosition(results[0].geometry.location);
+                        //alert(results[0].geometry.location);
+                        let latitude = results[0].geometry.location.lat();
+                        let longitude = results[0].geometry.location.lng();
+                        var inputlatitude = document.getElementById('latitude');
+                        inputlatitude.value = latitude;
+                        var inputlongitude = document.getElementById('longitude');
+                        inputlongitude.value = longitude;
+
+                        alert("Latitude: " + latitude + "\nLongitude: " + longitude);
                         marker.setVisible(true);
                     } else {
                         window.alert('Nenhum local foi encontrado para o endereço fornecido.');

@@ -8,10 +8,12 @@ $bairro = $_POST['bairro'];
 $statusresiduo = $_POST['statusresiduo'];
 $endereco = $_POST['addressInput'];
 $id = $_POST['id_usuario'];
+$latitude = $_POST['latitude'];
+$longitude = $_POST['longitude'];
 
 
 // Prepare e execute a query
-$query = "INSERT INTO ponto_coleta (nome,endereco, bairro, status,id_usuario) VALUES ('$nome', '$endereco', '$bairro', '$statusresiduo', '$id')";
+$query = "INSERT INTO ponto_coleta (nome,endereco, bairro, status,id_usuario, latitude, longitude) VALUES ('$nome', '$endereco', '$bairro', '$statusresiduo', '$id', '$latitude', '$longitude')";
 
 if ($conn->query($query) === TRUE) {
     $ultimo_id = $conn->insert_id;

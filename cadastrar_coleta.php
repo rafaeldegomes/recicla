@@ -1,4 +1,5 @@
 <?php
+//teste pull
 $host = "localhost";
 $db   = "reciclatche";
 $user = "root";

@@ -333,7 +333,7 @@ session_start();
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Pontos de Coleta</span>
                             </a>
-                        </li>
+                        </li> 
                         <li>
                             <a href="mapa_coleta.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>

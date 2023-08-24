@@ -86,10 +86,10 @@ if (empty($id)) {
                                         <td><?php echo $record['horario']; ?></td>
                                         <td><?php echo $record['peso']; ?></td>
                                         <td>
-                                            
-                                                        
-                                                            <img src="<?php echo $record['foto']; ?>" class="img-fluid" alt="Resíduo">
-                                                        
+
+
+                                            <img src="<?php echo $record['foto']; ?>" class="img-fluid" alt="Resíduo">
+
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -1,17 +1,6 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "reciclatche";
-
-// Criar conexão
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo $id = $_GET['id'];
+require_once "conecta.php";
+$id = $_GET['id'];
 // Primeiro, obtenha o status atual
 $selectSql = "SELECT status FROM residuos WHERE id_residuo = '$id'";
 $result = $conn->query($selectSql);

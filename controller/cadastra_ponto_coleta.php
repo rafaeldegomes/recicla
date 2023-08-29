@@ -23,9 +23,9 @@ if ($conn->query($query) === TRUE) {
     $horas_fim = $_POST['hora_fim'];
 
     for($i = 0; $i < count($dias); $i++) {
-        echo $dia = $dias[$i];
-       echo  $hora_inicio = $horas_inicio[$i];
-       echo $hora_fim = $horas_fim[$i];
+        $dia = $dias[$i];
+       $hora_inicio = $horas_inicio[$i];
+       $hora_fim = $horas_fim[$i];
     
         $sql = "INSERT INTO horarios_coleta (dia, hora_inicio, hora_fim , id_ponto_coleta) VALUES ('$dia', '$hora_inicio', '$hora_fim', ' $ultimo_id')";
         if ($conn->query($sql) === TRUE) {

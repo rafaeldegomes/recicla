@@ -46,21 +46,13 @@ if (empty($id)) {
 
                         <?php
 
-                        $host = "localhost";
-                        $db   = "reciclatche";
-                        $user = "root";
-                        $pass = "";
-
-                        $connection = new mysqli($host, $user, $pass, $db);
-                        if ($connection->connect_error) {
-                            die("Connection failed: " . $connection->connect_error);
-                        }
+                        require_once "controller/conecta.php";
                         $query = "SELECT *
                         FROM ponto_coleta AS pc
                         LEFT JOIN horarios_coleta AS hc ON pc.id_ponto_coleta = hc.id_ponto_coleta
                         where pc.status = 'Ativo';
                         ";
-                        $result = $connection->query($query);
+                        $result = $conn->query($query);
 
                         $locations = [];
                         while ($row = $result->fetch_assoc()) {
@@ -216,7 +208,7 @@ if (empty($id)) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
+
                     <form action="cadastrar_coleta.php" method="POST" enctype="multipart/form-data">
                         <!-- Input para receber o ID -->
                         <input type="text" id="inputId" name="inputId">

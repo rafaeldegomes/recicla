@@ -1,18 +1,6 @@
 <?php
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "seu_banco_de_dados"; // Mude para o nome do seu banco de dados
-
-// Criar conexão
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+require_once "conecta.php";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Usando hash para segurança

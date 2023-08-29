@@ -1,14 +1,5 @@
 <?php
-//teste pull
-$host = "localhost";
-$db   = "reciclatche";
-$user = "root";
-$pass = "";
-$connection = new mysqli($host, $user, $pass, $db);
-
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+require_once "conecta.php";
 
 // Verificar se a requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_ponto_coleta = $_POST['inputId'];
     $residuo = $_POST['residuo'];
     $horario = $_POST['horario'];
-    echo $peso = $_POST['peso'];
+$peso = $_POST['peso'];
     $foto = "";
 
    if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
@@ -36,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $sql = "INSERT INTO residuo_coletado (id_usuario, id_ponto_coleta, residuo , horario, foto , peso) VALUES 
 ('$id_usuario', '$id_ponto_coleta', '$residuo', ' $horario', '$foto', ' $peso')";
-if ($connection->query($sql) === TRUE) {
+if ($conn->query($sql) === TRUE) {
     header('Location: entrega_residuos.php');
 } else {
     echo "Erro ao inserir: " . $conn->error;
@@ -44,5 +35,5 @@ if ($connection->query($sql) === TRUE) {
 
 }
 
-$connection->close();
+$conn->close();
 ?>

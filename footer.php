@@ -347,7 +347,7 @@ session_start();
                             </a>
                         </li>
                         <li>
-                            <a href="apps-chat.html" class=" waves-effect">
+                            <a href="bairros.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Bairros</span>
                             </a>

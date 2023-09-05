@@ -1,14 +1,14 @@
 <?php
-// Conexão com o banco de dados
+// Conex達o com o banco de dados
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "reciclatche";
+$username = "recic443_reciclatche";
+$password = "reciclatche2023";
+$dbname = "recic443_reciclatche";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if (!$conn) {
-    die("Conexão falhou: " . mysqli_connect_error());
+    die("Conex達o falhou: " . mysqli_connect_error());
 }
 
 

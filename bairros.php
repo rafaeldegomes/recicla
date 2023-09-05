@@ -249,7 +249,7 @@ if (empty($id)) {
                                     <table class="table mb-0">
                                         <thead>
                                             <tr>
-                                                <th>Nome</th>
+                                                <th>Nome 2</th>
                                                 <th>Tipo Resíduo</th>
                                                 <th>Categoria</th>
                                                 <th>Tecnologia Tratamento</th>

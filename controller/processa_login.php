@@ -33,7 +33,7 @@ require_once "conecta.php";
             header("Location: pagina_usuario_comum.php");
         } else {
             // Caso o nível não seja definido, redireciona para uma página padrão
-            header("Location: pagina_padrao.php");
+            header("Location: ../index.php?id=1");
         }
         exit(); // Termina a execução do script após o redirecionamento
     } else {
@@ -44,4 +44,3 @@ require_once "conecta.php";
 
 
 // ... Código posterior ...
-?>

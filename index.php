@@ -24,7 +24,7 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
 
     <body>
@@ -75,6 +75,7 @@
                                                 </div>
                                         
                                                 <div class="mt-4">
+                                                    
                                                     <button class="btn btn-primary w-100" type="submit">Entrar</button>
                                                 </div>
                                         
@@ -106,7 +107,32 @@
                 </div>
             </div>
         </div>
-        
+        <script>
+            window.onload = function() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    if (urlParams.has('id')) {
+       // alert('meuParametro está presente na URL!');
+       teste()
+        const valor = urlParams.get('id');
+       // alert(`Valor de meuParametro: ${valor}`);
+    } else {
+       // alert('meuParametro NÃO está presente na URL!');
+    }
+}
+
+            function teste(){
+                Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'você errou seu login ou sua senha!',
+  footer: '<a href="">tente novamente!</a>'
+})    
+            }
+            
+        </script>
+
         <!-- JAVASCRIPT -->
         <script src="assets/libs/jquery/jquery.min.js"></script>
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

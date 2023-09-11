@@ -26,7 +26,7 @@ if (empty($id)) {
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Visualizar Residuo <?php echo $id_residuo; ?></h4>
+                            <h4 class="mb-sm-0">Visualizar Resíduo</h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -54,9 +54,9 @@ if (empty($id)) {
                                     <input type="hidden" id="id" name="id" value="<?php echo $row['id_residuo']; ?>">
                                     <div class="row">
                                         <div class="col">
-                                            <label for="example-text-input" class="col-sm-6 col-form-label">Nome comun do resíduo</label>
+                                            <label for="example-text-input" class="col-sm-6 col-form-label">Nome comum do resíduo</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input" value="<?php echo $row['nome']; ?>">
+                                                <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Resíduo" id="example-text-input" value="<?php echo $row['nome']; ?>">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -151,7 +151,7 @@ if (empty($id)) {
 
                                     <div class="row">
                                         <div class="col">
-                                            <label class="col-sm-6 col-form-label">Numero de Risco</label>
+                                            <label class="col-sm-6 col-form-label">Nmero de Risco</label>
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example" name="numero_risco" id="numero_risco">
                                                     <option selected="<?php echo $row['numero_risco']; ?>"><?php echo $row['numero_risco']; ?></option>

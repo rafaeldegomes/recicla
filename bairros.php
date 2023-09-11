@@ -206,7 +206,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Residuos Ativos</p>
+                                                <p class="text-truncate mb-2">Bairros Ativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Ativos</sup></h4>
                                             </div>
 
@@ -219,7 +219,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Residuos Inativos</p>
+                                                <p class="text-truncate mb-2">Bairros Inativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Inativos</sup></h4>
                                             </div>
 
@@ -230,7 +230,7 @@ if (empty($id)) {
                             
                             <div class="col-md-6">
 
-                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Residuo</button>
+                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Bairro</button>
 
                             </div>
                             <!--  Modal content for the above example -->
@@ -239,7 +239,7 @@ if (empty($id)) {
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Resíduos Cadastrados</h4>
+                                <h4 class="card-title">Bairros Cadastrados</h4>
                                 <!--<p class="card-title-desc">
                                     Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>
                                     to make them scroll horizontally on small devices (under 768px).

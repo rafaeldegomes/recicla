@@ -24,7 +24,7 @@ if (empty($id)) {
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Residuos</h4>
+                            <h4 class="mb-sm-0">Resíduos</h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -47,13 +47,13 @@ if (empty($id)) {
                                             <div class="row">
                                                 <div class="col">
                                                 <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id;?>">
-                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome comun do resíduo</label>
+                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome comum do resíduo</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Resíduo" id="example-text-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
+                                                    <label class="col-sm-6 col-form-label">Tipo do Resíduo</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
                                                             <option selected="Reciclaveis">Reciclaveis</option>
@@ -142,7 +142,7 @@ if (empty($id)) {
 
                                             <div class="row">
                                                 <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Numero de Risco</label>
+                                                    <label class="col-sm-6 col-form-label">Número de Risco</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="numero_risco" id="numero_risco">
                                                             <option selected="">2 - Desprendimento de Gás devido a pressao ou reacao quimica</option>
@@ -172,7 +172,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                 </div>
                                                 <div class="col" style="text-align: left;">
-                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
+                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Resíduo</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -206,7 +206,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Residuos Ativos</p>
+                                                <p class="text-truncate mb-2">Resíduos Ativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Ativos</sup></h4>
                                             </div>
 
@@ -219,7 +219,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Residuos Inativos</p>
+                                                <p class="text-truncate mb-2">Resíduos Inativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Inativos</sup></h4>
                                             </div>
 
@@ -230,7 +230,7 @@ if (empty($id)) {
                             
                             <div class="col-md-6">
 
-                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Residuo</button>
+                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Resíduo</button>
 
                             </div>
                             <!--  Modal content for the above example -->
@@ -250,12 +250,12 @@ if (empty($id)) {
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
-                                                <th>Tipo Resíduo</th>
+                                                <th>Tipo do Resíduo</th>
                                                 <th>Categoria</th>
-                                                <th>Tecnologia Tratamento</th>
+                                                <th>Tecnologia de Tratamento</th>
                                                 <th>Classe</th>
                                                 <th>Status</th>
-                                                <th>Opcoes</th>
+                                                <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>

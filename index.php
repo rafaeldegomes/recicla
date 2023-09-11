@@ -48,7 +48,7 @@
                                             <div class="p-3">
                                               <div class="text-center mt-1">
                                                 <h4 class="font-size-18">Bem-Vindo!</h4>
-                                                <p class="text-muted">Coloque suas informações para realizar o login</p>
+                                                <p class="text-muted">Insira seus dados de acesso à plataforna.</p>
                                               </div>
                                             <!-- Modal para exibir mensagem de erro -->
                                             <div id="errorModal" class="modal">

@@ -37,9 +37,7 @@ require_once "conecta.php";
         }
         exit(); // Termina a execução do script após o redirecionamento
     } else {
-        // Login falhou
-        $mensagemErro = "Login falhou. Verifique seu email e senha.";
-        echo $mensagemErro;
+        header("Location: ../index.php?id=1");
     }
 
 

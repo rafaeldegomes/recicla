@@ -165,6 +165,7 @@ if (empty($id)) {
                                                 </div>
                                             </div>
                                             <hr>
+                                            
                                             <div class="row">
                                                 <div class="col">
 
@@ -227,12 +228,21 @@ if (empty($id)) {
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="col-md-6">
-
-                                <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Resíduo</button>
-
+                            <div class="container">
+                            <div class="row">
+                            <div class="col-sm">
+      
                             </div>
+                            <div class="col-sm">
+      
+                            </div>
+                            <div class="col-sm">
+                            <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Resíduo</button>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            
                             <!--  Modal content for the above example -->
                             <br><br>    <br>
                         </div>

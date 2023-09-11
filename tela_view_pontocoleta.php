@@ -31,12 +31,12 @@ if (empty($id)) {
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Visualizar Ponto de Coleta <?php echo $id_residuo; ?></h4>
+                            <h4 class="mb-sm-0">Visualizar Ponto de Coleta</h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Pagina Inicial</li>
+                                    <li class="breadcrumb-item active">Página Inicial</li>
                                 </ol>
 
                             </div>
@@ -60,9 +60,9 @@ if (empty($id)) {
                                     <div class="row">
                                         <div class="col">
                                             <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
-                                            <label for="example-text-input" class="col-sm-6 col-form-label">Nome Ponto Coleta</label>
+                                            <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Ponto de Coleta</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" type="text" name="nome" id="nome" value="<?php echo $row['nome']; ?>" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                                <input class="form-control" type="text" name="nome" id="nome" value="<?php echo $row['nome']; ?>" placeholder="Digite o nome do Ponto de Coleta" id="example-text-input">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -105,7 +105,7 @@ if (empty($id)) {
 
                                     <div class="row">
                                         <div class="col">
-                                            <label class="col-sm-6 col-form-label">Horário de Coleta</label>
+                                            <label class="col-sm-6 col-form-label">Horário previsto</label>
 
 
                                             <div class="col-sm-10">
@@ -134,7 +134,7 @@ if (empty($id)) {
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Residuo :</label>
+                                                            <label>Resíduo:</label>
                                                             <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
                                                                 <option selected="<?php echo $row['hora_fim']; ?>"><?php echo $row['hora_fim']; ?></option>
                                                                 <option value="Terca">Lata</option>
@@ -185,7 +185,8 @@ if (empty($id)) {
                                         <div class="col">
                                         </div>
                                         <div class="col" style="text-align: left;">
-                                            <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
+                                            <button type="submitt" class="btn btn-primary waves-effect waves-light"><i class="ri-save-line" ></i> Salvar</button>
+                                            <a href="ponto_coleta_cadastro.php"><button  class="btn btn-warning waves-effect waves-light">  <i class="ri-reply-fill"></i> Voltar</button></a>
                                         </div>
                                     </div>
                                 </form>

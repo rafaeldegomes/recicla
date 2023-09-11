@@ -52,7 +52,7 @@ if (empty($id)) {
                                 <div class="row">
                                     <div class="col">
                                         <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
-                                        <label for="example-text-input" class="col-sm-6 col-form-label">Nome Ponto Coleta</label>
+                                        <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Ponto de Coleta</label>
                                         <div class="col-sm-10">
                                             <input class="form-control" type="text" name="nome" id="nome" required placeholder="Digite o nome do Residuo" id="example-text-input">
                                         </div>
@@ -108,7 +108,7 @@ if (empty($id)) {
 
                                 <div class="row">
                                     <div class="col">
-                                        <label class="col-sm-6 col-form-label">Horário de Coleta</label>
+                                        <label class="col-sm-6 col-form-label">Horário previsto</label>
                                         <div class="col-sm-10">
 
 
@@ -133,7 +133,7 @@ if (empty($id)) {
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label>Residuo :</label>
+                                                    <label>Resíduo:</label>
                                                     <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
                                                         <?php
                                                         $sql2 = "SELECT * FROM residuos";
@@ -185,7 +185,7 @@ if (empty($id)) {
                                 <div class="row">
 
 
-                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
+                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar Ponto de Coleta</button>
 
                                 </div>
                             </form>

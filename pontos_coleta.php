@@ -57,7 +57,7 @@ if (empty($id)) {
                                             <div class="row">
                                                 <div class="col">
                                                     <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
-                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome Ponto Coleta</label>
+                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Ponto de Coleta</label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
                                                     </div>
@@ -101,7 +101,7 @@ if (empty($id)) {
 
                                             <div class="row">
                                                 <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Horário de Coleta</label>
+                                                    <label class="col-sm-6 col-form-label">Horário previsto</label>
                                                     <div class="col-sm-10">
 
 
@@ -146,7 +146,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                 </div>
                                                 <div class="col" style="text-align: left;">
-                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
+                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar Ponto de Coleta</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -181,7 +181,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Ponto de Coletas cadastrados</p>
+                                                <p class="text-truncate mb-2">Pontos de Coletas Ativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Ativos</sup></h4>
                                             </div>
 
@@ -194,7 +194,7 @@ if (empty($id)) {
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
-                                                <p class="text-truncate mb-2">Residuos Inativos</p>
+                                                <p class="text-truncate mb-2">Pontos de Coletas Inativos</p>
                                                 <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Inativos</sup></h4>
                                             </div>
 
@@ -203,11 +203,21 @@ if (empty($id)) {
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            
+                            <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+    <a href="ponto_coleta_cadastro.php"><button type="button" class="btn btn-primary waves-effect waves-light" >Cadastrar novo Ponto de Coleta</button></a>
 
-                                <a href="ponto_coleta_cadastro.php"><button type="button" class="btn btn-primary waves-effect waves-light" >Cadastrar novo Ponto de Coleta</button></a>
-
-                            </div>
+    </div>
+  </div>
+</div>
                             <br><br><br>
                             <!--  Modal content for the above example -->
 
@@ -226,10 +236,10 @@ if (empty($id)) {
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
-                                                <th>Endereco</th>
+                                                <th>Endereço</th>
                                                 <th>Bairro</th>
                                                 <th>Status</th>
-                                                <th>Opcoes</th>
+                                                <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -38,7 +38,7 @@ if (empty($id)) {
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="myExtraLargeModalLabel">Cadastrar novo Resíduo</h5>
+                                        <h5 class="modal-title" id="myExtraLargeModalLabel">Cadastrar novo Bairro</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -47,12 +47,12 @@ if (empty($id)) {
                                             <div class="row">
                                                 <div class="col">
                                                 <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id;?>">
-                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome comun do resíduo</label>
+                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Bairro</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                                      --  <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Bairro" id="example-text-input">
                                                     </div>
                                                 </div>
-                                                <div class="col">
+                                               <div class="col">
                                                     <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
@@ -64,7 +64,7 @@ if (empty($id)) {
 
                                                 </div>
 
-                                            </div>
+                                            </div> 
                                             <div class="row">
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Categoria</label>
@@ -172,7 +172,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                 </div>
                                                 <div class="col" style="text-align: left;">
-                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Residuo</button>
+                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Bairro</button>
                                                 </div>
                                             </div>
                                         </form>

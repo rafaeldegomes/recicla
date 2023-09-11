@@ -47,7 +47,7 @@
                                         <div class="card-body">
                                             <div class="p-3">
                                               <div class="text-center mt-1">
-                                                <h4 class="font-size-18">Bem Vindo!</h4>
+                                                <h4 class="font-size-18">Bem-Vindo!</h4>
                                                 <p class="text-muted">Coloque suas informações para realizar o login</p>
                                               </div>
                                             <!-- Modal para exibir mensagem de erro -->

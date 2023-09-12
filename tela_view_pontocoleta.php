@@ -10,7 +10,7 @@ if (empty($id)) {
     require_once "footer.php";
     require_once "controller/conecta.php";
 ?>
- <style>
+    <style>
         #map {
             height: 400px;
         }
@@ -171,6 +171,18 @@ if (empty($id)) {
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <br>
+                                                    <div class="row">
+                                                        <div class="col">
+
+                                                        </div>
+                                                        <div class="col">
+                                                        </div>
+                                                        <div class="col" style="text-align: left;">
+                                                            <button type="submitt" class="btn btn-primary waves-effect waves-light"><i class="ri-save-line"></i> Salvar</button>
+                                                            <a href="ponto_coleta_cadastro.php"><button class="btn btn-warning waves-effect waves-light"> <i class="ri-reply-fill"></i> Voltar</button></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -178,17 +190,7 @@ if (empty($id)) {
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row">
-                                        <div class="col">
 
-                                        </div>
-                                        <div class="col">
-                                        </div>
-                                        <div class="col" style="text-align: left;">
-                                            <button type="submitt" class="btn btn-primary waves-effect waves-light"><i class="ri-save-line" ></i> Salvar</button>
-                                            <a href="ponto_coleta_cadastro.php"><button  class="btn btn-warning waves-effect waves-light">  <i class="ri-reply-fill"></i> Voltar</button></a>
-                                        </div>
-                                    </div>
                                 </form>
                             </div>
 

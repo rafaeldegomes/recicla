@@ -43,10 +43,10 @@ if (empty($id)) {
                                     </div>
                                     <div class="modal-body">
                                         <form action="controller/cadastra_residuo.php" method="POST">
-                                            
+
                                             <div class="row">
                                                 <div class="col">
-                                                <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id;?>">
+                                                    <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
                                                     <label for="example-text-input" class="col-sm-6 col-form-label">Nome comum do resíduo</label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Resíduo" id="example-text-input">
@@ -72,7 +72,7 @@ if (empty($id)) {
                                                         <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
                                                             <option selected="">Não Reciclavel</option>
                                                             <option value="Não Reciclavel">Não Reciclavel</option>
-                                                            
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -165,7 +165,7 @@ if (empty($id)) {
                                                 </div>
                                             </div>
                                             <hr>
-                                            
+
                                             <div class="row">
                                                 <div class="col">
 
@@ -229,22 +229,22 @@ if (empty($id)) {
                                 </div>
                             </div>
                             <div class="container">
-                            <div class="row">
-                            <div class="col-sm">
-      
+                                <div class="row">
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm" style="text-align: right;">
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Resíduo</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm">
-      
-                            </div>
-                            <div class="col-sm">
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo Resíduo</button>
-                            </div>
-                            </div>
-                            </div>
-                            
-                            
+
+
                             <!--  Modal content for the above example -->
-                            <br><br>    <br>
+                            <br><br> <br>
                         </div>
                         <div class="card">
                             <div class="card-body">
@@ -289,7 +289,7 @@ if (empty($id)) {
                                                         <div class="col">
                                                             <a href='tela_view_residuos.php?id_residuo=<?php echo $row["id_residuo"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-edit-line"></i></a>
 
-                                                          
+
 
                                                             <a href='controller/atualiza_status_residuo.php?id=<?php echo $row["id_residuo"]; ?>' type="button" class="btn btn-danger waves-effect waves-light"><i class="ri-sensor-fill"></i></a>
                                                         </div>

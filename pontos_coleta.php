@@ -33,7 +33,7 @@ if (empty($id)) {
 
 
 
-                            
+
                             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap" async defer></script>
 
                             <div class="page-title-right">
@@ -145,7 +145,7 @@ if (empty($id)) {
                                                 </div>
                                                 <div class="col">
                                                 </div>
-                                                <div class="col" style="text-align: left;">
+                                                <div class="col" style="text-align: right;">
                                                     <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar Ponto de Coleta</button>
                                                 </div>
                                             </div>
@@ -171,7 +171,7 @@ if (empty($id)) {
                         $result2 = $conn->query($query_total_residuos2);
 
                         // Obtendo o número de registros
-                        $row2= $result2->fetch_assoc();
+                        $row2 = $result2->fetch_assoc();
                         $total2 = $row2['total'];
 
                         ?>
@@ -203,21 +203,21 @@ if (empty($id)) {
                                 </div>
                             </div>
 
-                            
-                            <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-    <a href="ponto_coleta_cadastro.php"><button type="button" class="btn btn-primary waves-effect waves-light" >Cadastrar novo Ponto de Coleta</button></a>
 
-    </div>
-  </div>
-</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm" style="text-align: right;">
+                                        <a href="ponto_coleta_cadastro.php"><button type="button" class="btn btn-primary waves-effect waves-light">Cadastrar novo Ponto de Coleta</button></a>
+
+                                    </div>
+                                </div>
+                            </div>
                             <br><br><br>
                             <!--  Modal content for the above example -->
 

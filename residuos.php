@@ -8,6 +8,7 @@ if (empty($id)) {
     require_once "footer.php";
     require_once "controller/conecta.php";
 ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -313,6 +314,79 @@ if (empty($id)) {
         <!-- End Page-content -->
 
         <!-- end main content-->
+        <script>
+            window.onload = function() {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+
+                if (urlParams.has('id')) {
+                    // alert('meuParametro está presente na URL!');
+                    sucessocadastra()
+                    const valor = urlParams.get('id');
+                    // alert(`Valor de meuParametro: ${valor}`);
+                } else if (urlParams.has('atualiza')) {
+                    sucessoaltera()
+                }else if (urlParams.has('status')) {
+                    sucessostatus()
+                }else {
+                    // alert('meuParametro NÃO está presente na URL!');
+                }
+            }
+            function sucessostatus() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Status atualizado com Sucesso'
+                })
+            }
+            function sucessoaltera() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Residuo atualizado com Sucesso'
+                })
+            }
+            function sucessocadastra() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Residuo cadastrado com Sucesso'
+                })
+            }
+        </script>
     <?php
 
     require_once "header.php";

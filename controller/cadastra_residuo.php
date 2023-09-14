@@ -20,7 +20,7 @@ $id = $_POST['id_usuario'];
 $query = "INSERT INTO residuos (nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco, grupo_embalagem,status,id_usuario) VALUES ('$nome', '$tipo_residuo', '$categoria', '$tecnologia_tratamento', '$classe', '$unidade_medida', '$classe_risco_principal', '$classe_risco_sub', '$numero_risco', '$grupo_embalagem', '$status', '$id')";
 
 if ($conn->query($query) === TRUE) {
-    header('Location: ../residuos.php');
+    header('Location: ../residuos.php?id=1');
     exit;  // Importante para garantir que o script pare de ser executado após o redirecionamento.
 
 } else {

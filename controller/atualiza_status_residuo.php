@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
     // Atualize o status na tabela "residuos"
     $updateSql = "UPDATE residuos SET status = '$newStatus' WHERE id_residuo = '$id'";
     if ($conn->query($updateSql) === TRUE) {
-        header('Location: ../residuos.php');
+        header('Location: ../residuos.php?status=1');
     exit;  // Importante para garantir que o script pare de ser executado após o redirecionamento.
 
     } else {

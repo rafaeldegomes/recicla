@@ -32,7 +32,7 @@ $sql = "UPDATE residuos SET
 WHERE id_residuo = $id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: residuos.php');
+    header('Location: residuos.php?atualiza=1');
     //header('Location: tela_view_residuos.php?id_residuo=' . $id);
     exit;  // Importante para garantir que o script pare de ser executado após o redirecionamento.
 } else {

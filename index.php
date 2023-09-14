@@ -95,7 +95,7 @@
                                         </div>
 
                                         <div class="mt-4 text-center">
-                                            <p>Quer conhecer nossas tecnologias ? <a href="#" class="fw-medium text-primary"> Entre em Contato </a> </p>
+                                            <p>Quer conhecer nossas tecnologias ? <a href="http://reciclatche.com.br/" class="fw-medium text-primary"> Entre em Contato </a> </p>
                                             <p>© <script>
                                                     document.write(new Date().getFullYear())
                                                 </script> Reactly. Crafted with <i class="mdi mdi-heart text-danger"></i> o Coração e Chimarrão</p>

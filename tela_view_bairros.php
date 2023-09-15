@@ -2,7 +2,7 @@
 session_start();
 
 $id = $_SESSION["usuario_id"];
-$id_bairro = $_GET['id_bairro'];
+$id_bairro = $_GET['id_bairros'];
 if (empty($id)) {
     header("Location: index.php");
 } else {

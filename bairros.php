@@ -145,13 +145,25 @@ if (empty($id)) {
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            <!--<div class="col-md-6">-->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm">
 
-                                <button type="button" class="btn btn-primary waves-effect waves-light"
-                                    data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo
-                                    Bairro</button>
+                                        </div>
+                                        <div class="col-sm">
 
-                            </div>
+                                        </div>
+                                        <div class="col-sm" style="text-align: right;">
+                                            <button type="button" class="btn btn-primary waves-effect waves-light"
+                                                data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo
+                                                Resíduo</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                           <!-- </div>-->
                             <!--  Modal content for the above example -->
                             <br><br> <br>
                         </div>

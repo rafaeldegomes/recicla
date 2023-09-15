@@ -68,7 +68,7 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="statusbairro" id="statusbairro">
-                                                    <!--<option selected="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option> -->
+                                                    <option selected="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option> 
                                                     <option value="Ativo">Ativo</option>
                                                     <option value="Inativo">Inativo</option>
                                                 </select>

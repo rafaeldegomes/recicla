@@ -157,7 +157,7 @@ if (empty($id)) {
                                         <div class="col-sm" style="text-align: right;">
                                             <button type="button" class="btn btn-primary waves-effect waves-light"
                                                 data-bs-toggle="modal" data-bs-target=".bs-example-modal-xl">Cadastrar novo
-                                                Resíduo</button>
+                                               Bairro</button>
                                         </div>
                                     </div>
                                 </div>

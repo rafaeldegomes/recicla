@@ -48,17 +48,17 @@ if (empty($id)) {
                                             <div class="row">
                                                 <div class="col">
                                                     <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
-                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome comum do resíduo</label>
+                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Fornecedor</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Resíduo" id="example-text-input">
+                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do fornecedor" id="example-text-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Tipo do Resíduo</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
-                                                            <option selected="Reciclaveis">Reciclaveis</option>
-                                                            <option value="Reciclaveis">Reciclaveis</option>
+                                                            <option selected="Reciclavel">Reciclável</option>
+                                                            <option value="Reciclavel">Reciclável</option>
                                                         </select>
                                                     </div>
 
@@ -66,30 +66,7 @@ if (empty($id)) {
                                                 </div>
 
                                             </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Categoria</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
-                                                            <option selected="">Não Reciclavel</option>
-                                                            <option value="Não Reciclavel">Não Reciclavel</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Tecnologia de Tratamento</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="tecnologia_tratamento" id="tecnologia_tratamento">
-                                                            <option selected="Reciclagem">Reciclagem</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                        
                                             <div class="row">
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Status</label>
@@ -101,70 +78,14 @@ if (empty($id)) {
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Classe</label>
+                                                    <label class="col-sm-6 col-form-label">Endereço</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="classe" id="classe">
-                                                            <option selected="Classe I">Classe I </option>
-                                                            <option value="Classe I">Classe I</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
+                                                    <input class="form-control" type="text" name="endereço" id="endereço" placeholder="Digite o endereço" id="example-text-input">
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Principal</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="classe_risco_principal" id="classe_risco_principal">
-                                                            <option selected="">1.1A - Substancias e Artigos com Risco de Explosao em Massa</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Classe/Subclasse Risco Subsidiário</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="classe_risco_sub" id="classe_risco_sub">
-                                                            <option selected="">Open this select menu</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Número de Risco</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="numero_risco" id="numero_risco">
-                                                            <option selected="">2 - Desprendimento de Gás devido a pressao ou reacao quimica</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label class="col-sm-6 col-form-label">Grupo de Embalagem</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="grupo_embalagem" id="grupo_embalagem">
-                                                            <option selected="">I - Substancias que apresentam auto risco</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                             <hr>
 
                                             <div class="row">
@@ -174,7 +95,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                 </div>
                                                 <div class="col" style="text-align: left;">
-                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Resíduo</button>
+                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar novo Fornecedor</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -185,17 +106,17 @@ if (empty($id)) {
                         <?php
 
                         // Consulta SQL para contar os registros
-                        $query_total_residuos = "SELECT COUNT(*) as total FROM fornecedores where id_fornecedores = '$id' and status = 'Ativo'";
+                        $query_total_fornecedores = "SELECT COUNT(*) as total FROM fornecedores where id_fornecedores = '$id' and status = 'Ativo'";
 
-                        $result = $conn->query($query_total_residuos);
+                        $result = $conn->query($query_total_fornecedores);
 
                         // Obtendo o número de registros
                         $row = $result->fetch_assoc();
                         $total = $row['total'];
 
-                        $query_total_residuos2 = "SELECT COUNT(*) as total FROM fornecedores where id_fornecedores = '$id' and status = 'Inativo'";
+                        $query_total_fornecedores2 = "SELECT COUNT(*) as total FROM fornecedores where id_fornecedores = '$id' and status = 'Inativo'";
 
-                        $result2 = $conn->query($query_total_residuos2);
+                        $result2 = $conn->query($query_total_fornecedores2);
 
                         // Obtendo o número de registros
                         $row2 = $result2->fetch_assoc();
@@ -284,11 +205,11 @@ if (empty($id)) {
                                                 <td>
                                                     <div class="row">
                                                         <div class="col">
-                                                            <a href='tela_view_residuos.php?id_residuo=<?php echo $row["id_residuo"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-edit-line"></i></a>
+                                                            <a href='tela_view_fornecedores.php?id_fornecedores=<?php echo $row["id_fornecedores"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-edit-line"></i></a>
 
 
 
-                                                            <a href='controller/atualiza_status_residuo.php?id=<?php echo $row["id_residuo"]; ?>' type="button" class="btn btn-danger waves-effect waves-light"><i class="ri-sensor-fill"></i></a>
+                                                            <a href='controller/atualiza_status_fornecedores.php?id=<?php echo $row["id_fornecedores"]; ?>' type="button" class="btn btn-danger waves-effect waves-light"><i class="ri-sensor-fill"></i></a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -361,7 +282,7 @@ if (empty($id)) {
 
                 Toast.fire({
                     icon: 'success',
-                    title: 'Residuo atualizado com Sucesso'
+                    title: 'Fornecedor atualizado com Sucesso'
                 })
             }
             function sucessocadastra() {
@@ -379,7 +300,7 @@ if (empty($id)) {
 
                 Toast.fire({
                     icon: 'success',
-                    title: 'Residuo cadastrado com Sucesso'
+                    title: 'Fornecedor cadastrado com Sucesso'
                 })
             }
         </script>

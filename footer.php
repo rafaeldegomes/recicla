@@ -355,7 +355,7 @@ session_start();
                         
                         <li class="menu-title">Cadastro Operacional</li>
                         <li>
-                            <a href="apps-chat.html" class=" waves-effect">
+                            <a href="fornecedores.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Fornecedores</span>
                             </a>

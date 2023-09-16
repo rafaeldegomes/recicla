@@ -7,7 +7,7 @@ $id = $_POST['id'];
 $nome = $_POST['nome'];
 $tipo_resíduo = $_POST['tipo_resíduo'];
 $endereço = $_POST['endereço'];
-$status = $_POST['statusfornecedor'];
+$status = $_POST['status'];
 
 // SQL para atualizar o registro
 $sql = "UPDATE fornecedores SET 

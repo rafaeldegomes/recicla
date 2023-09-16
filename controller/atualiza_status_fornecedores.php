@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     // Determine o novo status
     $newStatus = ($currentStatus == 'Ativo') ? 'Inativo' : 'Ativo';
 
-    // Atualize o status na tabela "residuos"
+    // Atualize o status na tabela "fornecedores"
     $updateSql = "UPDATE fornecedores SET status = '$newStatus' WHERE id_fornecedores = '$id'";
     if ($conn->query($updateSql) === TRUE) {
         header('Location: ../fornecedores.php?status=1');

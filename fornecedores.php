@@ -43,11 +43,11 @@ if (empty($id)) {
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="controller/cadastra_residuo.php" method="POST">
+                                        <form action="controller/cadastra_fornecedores.php" method="POST">
 
                                             <div class="row">
                                                 <div class="col">
-                                                    <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
+                                                    <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>"> 
                                                     <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Fornecedor</label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do fornecedor" id="example-text-input">
@@ -56,7 +56,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Tipo do Resíduo</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="tipo_residuo" id="tipo_residuo">
+                                                        <select class="form-select" aria-label="Default select example" name="tipo_resíduo" id="tipo_resíduo">
                                                             <option selected="Reciclavel">Reciclável</option>
                                                             <option value="Reciclavel">Reciclável</option>
                                                         </select>

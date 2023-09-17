@@ -65,10 +65,10 @@ if (empty($id)) {
                                             <label class="col-sm-6 col-form-label">Tipo de Resíduo</label>
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example"
-                                                    name="tipo_residuo" id="tipo_residuo">
-                                                   <!-- <option selected="<?php echo $row['tipo_residuo']; ?>"><?php echo $row['tipo_residuo']; ?></option> -->
-                                                    <option value="1">Reciclável</option>
-                                                    <option value="2">Reciclável</option>
+                                                    name="tipo_resíduo" id="tipo_resíduo">
+                                                    <?php echo $row['tipo_resíduo']; ?>"><?php echo $row['tipo_resíduo']; ?></option>
+                                                    <option value="Reciclável">Reciclável</option>
+                                                    <option value="Reciclável">Reciclável</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -84,17 +84,7 @@ if (empty($id)) {
                                                     value="<?php echo $row['endereço']; ?>">
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <label class="col-sm-6 col-form-label">Status </label>
-                                            <div class="col-sm-10">
-                                                <select class="form-select" aria-label="Default select example"
-                                                    name="statusfornecedor" id="statusfornecedor">
-                                                    <option selected="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option>
-                                                    <option value="Ativo">Ativo</option>
-                                                    <option value="Inativo">Inativo</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                     <hr>
                 
@@ -157,6 +147,6 @@ if (empty($id)) {
         <?php
 
         require_once "header.php";
-        echo $nome = $_SESSION["nome"];
+       // echo $nome = $_SESSION["nome"];
 }
 ?>

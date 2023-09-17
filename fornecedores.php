@@ -71,7 +71,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Status</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="statusresiduo" id="statusresiduo">
+                                                        <select class="form-select" aria-label="Default select example" name="status" id="status">
                                                             <option selected="Ativo">Ativo</option>
                                                             <option value="Inativo">Inativo</option>
                                                         </select>
@@ -192,7 +192,7 @@ if (empty($id)) {
 
                                             <?php
                                             // Consulta SQL para buscar os dados
-                                            $query = "SELECT id_fornecedores, nome, tipo_resíduo, endereço, status FROM fornecedores where id_fornecedores = '$id'";
+                                            $query = "SELECT id_fornecedores, nome, tipo_resíduo, endereço, status FROM fornecedores";
 
                                             $result = $conn->query($query);
                                             while ($row = $result->fetch_assoc()) {

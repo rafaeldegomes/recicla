@@ -19,7 +19,7 @@ WHERE id_fornecedores = $id";
 
 if ($conn->query($sql) === TRUE) {
     header('Location: fornecedores.php?atualiza=1');
-    //header('Location: tela_view_residuos.php?id_residuo=' . $id);
+   // header('Location: tela_view_fornecedores.php?id_residuo=' . $id);
     exit;  // Importante para garantir que o script pare de ser executado após o redirecionamento.
 } else {
     echo "Erro na atualização do registro: " . $conn->error;

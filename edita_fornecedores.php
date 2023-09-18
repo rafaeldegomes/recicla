@@ -7,14 +7,12 @@ $id = $_POST['id'];
 $nome = $_POST['nome'];
 $tipo_resíduo = $_POST['tipo_resíduo'];
 $endereço = $_POST['endereço'];
-$status = $_POST['status'];
 
 // SQL para atualizar o registro
 $sql = "UPDATE fornecedores SET 
     nome = '$nome',
     tipo_resíduo = '$tipo_resíduo',
-    endereço = '$endereço',
-    status = '$status' 
+    endereço = '$endereço'
 WHERE id_fornecedores = $id";
 
 if ($conn->query($sql) === TRUE) {

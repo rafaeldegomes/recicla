@@ -5,7 +5,7 @@ require_once "conecta.php";
 $nome = $_POST['nome'];
 $tipo_resíduo = $_POST['tipo_resíduo'];
 $endereço = $_POST['endereço'];
-$status = $_POST['status'];
+$status = $_POST['status2'];
 
 // Prepare e execute a query
 $query = "INSERT INTO fornecedores ( nome, tipo_resíduo, endereço, status) VALUES ( '$nome', '$tipo_resíduo', '$endereço', '$status')";

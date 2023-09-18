@@ -8,6 +8,8 @@ if (empty($id)) {
     require_once "footer.php";
     require_once "controller/conecta.php";
     ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -60,7 +62,7 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Status</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example"
-                                                            name="statusresiduo" id="statusresiduo">
+                                                            name="statusbairro" id="statusbairro">
                                                             <option selected="Ativo">Ativo</option>
                                                             <option value="Inativo">Inativo</option>
                                                         </select>
@@ -227,7 +229,79 @@ if (empty($id)) {
             </div> <!-- container-fluid -->
         </div>
         <!-- End Page-content -->
+        <script>
+            window.onload = function() {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
 
+                if (urlParams.has('id')) {
+                    // alert('meuParametro está presente na URL!');
+                    sucessocadastra()
+                    const valor = urlParams.get('id');
+                    // alert(`Valor de meuParametro: ${valor}`);
+                } else if (urlParams.has('atualiza')) {
+                    sucessoaltera()
+                }else if (urlParams.has('status')) {
+                    sucessostatus()
+                }else {
+                    // alert('meuParametro NÃO está presente na URL!');
+                }
+            }
+            function sucessostatus() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Status atualizado com Sucesso'
+                })
+            }
+            function sucessoaltera() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Bairro atualizado com Sucesso'
+                })
+            }
+            function sucessocadastra() {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Bairro cadastrado com Sucesso'
+                })
+            }
+        </script>
         <!-- end main content-->
         <?php
 

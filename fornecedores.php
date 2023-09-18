@@ -71,7 +71,7 @@ if (empty($id)) {
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Status</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="status" id="status">
+                                                        <select class="form-select" aria-label="Default select example" name="status2" id="status2">
                                                             <option selected="Ativo">Ativo</option>
                                                             <option value="Inativo">Inativo</option>
                                                         </select>
@@ -106,7 +106,7 @@ if (empty($id)) {
                         <?php
 
                         // Consulta SQL para contar os registros
-                        $query_total_fornecedores = "SELECT COUNT(*) as total FROM fornecedores where id_fornecedores = '$id' and status = 'Ativo'";
+                        $query_total_fornecedores = "SELECT COUNT(*) as total FROM fornecedores where status = 'Ativo'";
 
                         $result = $conn->query($query_total_fornecedores);
 
@@ -114,7 +114,7 @@ if (empty($id)) {
                         $row = $result->fetch_assoc();
                         $total = $row['total'];
 
-                        $query_total_fornecedores2 = "SELECT COUNT(*) as total FROM fornecedores where id_fornecedores = '$id' and status = 'Inativo'";
+                        $query_total_fornecedores2 = "SELECT COUNT(*) as total FROM fornecedores where status = 'Inativo'";
 
                         $result2 = $conn->query($query_total_fornecedores2);
 

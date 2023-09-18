@@ -2,14 +2,13 @@
 require_once "conecta.php";
 
 // Capture os dados do POST
-$id = $_POST['id_fornecedores'];
 $nome = $_POST['nome'];
 $tipo_resíduo = $_POST['tipo_resíduo'];
 $endereço = $_POST['endereço'];
 $status = $_POST['status'];
 
 // Prepare e execute a query
-$query = "INSERT INTO fornecedores (id_fornecedores, nome, tipo_resíduo, endereço, status) VALUES ('$id', '$nome', '$tipo_resíduo', '$endereço', '$status')";
+$query = "INSERT INTO fornecedores ( nome, tipo_resíduo, endereço, status) VALUES ( '$nome', '$tipo_resíduo', '$endereço', '$status')";
 
 if ($conn->query($query) === TRUE) {
     header('Location: ../fornecedores.php?id=1');

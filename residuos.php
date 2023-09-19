@@ -10,7 +10,7 @@ if (empty($id)) {
 ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- 
+
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
@@ -36,7 +36,7 @@ if (empty($id)) {
 
                             </div>
                         </div>
-                        
+
                         <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
@@ -257,10 +257,10 @@ if (empty($id)) {
                                     Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>
                                     to make them scroll horizontally on small devices (under 768px).
                                 </p>-->
-        
+
                                 <div class="table-responsive">
-                                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                       
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
@@ -315,8 +315,8 @@ if (empty($id)) {
             </div> <!-- container-fluid -->
         </div>
         <!-- End Page-content -->
-        
-</head>
+
+        </head>
         <!-- end main content-->
         <script>
             window.onload = function() {
@@ -330,109 +330,84 @@ if (empty($id)) {
                     // alert(`Valor de meuParametro: ${valor}`);
                 } else if (urlParams.has('atualiza')) {
                     sucessoaltera()
-                }else if (urlParams.has('status')) {
+                } else if (urlParams.has('status')) {
                     sucessostatus()
-                }else {
+                } else {
                     // alert('meuParametro NÃO está presente na URL!');
                 }
                 $('#datatable').DataTable({
-                    dom: 'Biplfrt', 
-        buttons: [
-            'pdfHtml5',
-            {
-                extend: 'copyHtml5',
-                text: 'Copiar'
-            },
-            'excelHtml5'
-        ],
-        lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Mostrar tudo"]],
+                    dom: 'Biplfrt',
+                    buttons: [
+                        'pdfHtml5',
+                        {
+                            extend: 'copyHtml5',
+                            text: 'Copiar'
+                        },
+                        'excelHtml5'
+                    ],
+                    lengthMenu: [
+                        [10, 25, 50, -1],
+                        [10, 25, 50, "Mostrar tudo"]
+                    ],
                     destroy: true,
-        language: {
-            "sEmptyTable": "Nenhum registro encontrado",
-            "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-            "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-            "sInfoFiltered": "(Filtrados de _MAX_ registros)",
-            "sInfoPostFix": "",
-            "sInfoThousands": ".",
-            "sLengthMenu": "_MENU_ resultados por página",
-            "sLoadingRecords": "Carregando...",
-            "sProcessing": "Processando...",
-            "sZeroRecords": "Nenhum registro encontrado",
-            "sSearch": "Pesquisar",
-            "oPaginate": {
-                "sNext": "Próximo",
-                "sPrevious": "Anterior",
-                "sFirst": "Primeiro",
-                "sLast": "Último"
-            },
-            "oAria": {
-                "sSortAscending": ": Ordenar colunas de forma ascendente",
-                "sSortDescending": ": Ordenar colunas de forma descendente"
+                    language: {
+                        "sEmptyTable": "Nenhum registro encontrado",
+                        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                        "sInfoPostFix": "",
+                        "sInfoThousands": ".",
+                        "sLengthMenu": "_MENU_ resultados por página",
+                        "sLoadingRecords": "Carregando...",
+                        "sProcessing": "Processando...",
+                        "sZeroRecords": "Nenhum registro encontrado",
+                        "sSearch": "Pesquisar",
+                        "oPaginate": {
+                            "sNext": "Próximo",
+                            "sPrevious": "Anterior",
+                            "sFirst": "Primeiro",
+                            "sLast": "Último"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": Ordenar colunas de forma ascendente",
+                            "sSortDescending": ": Ordenar colunas de forma descendente"
+                        }
+                    }
+                });
             }
-        }
-    });
-            }
+
             function sucessostatus() {
-                const Toast = Swal.mixin({
-                    toast: true,
+                Swal.fire({
                     position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
                     icon: 'success',
-                    title: 'Status atualizado com Sucesso'
+                    title: 'Residuo atualizado com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
                 })
             }
+
             function sucessoaltera() {
-                const Toast = Swal.mixin({
-                    toast: true,
+                Swal.fire({
                     position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
                     icon: 'success',
-                    title: 'Residuo atualizado com Sucesso'
+                    title: 'Residuo atualizado com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
                 })
             }
+
             function sucessocadastra() {
-                const Toast = Swal.mixin({
-                    toast: true,
+                Swal.fire({
                     position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
                     icon: 'success',
-                    title: 'Residuo cadastrado com Sucesso'
+                    title: 'Residuo cadastrado com sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
                 })
             }
-            
-    
-
-
         </script>
-        
-       
+
+
     <?php
 
     require_once "header.php";

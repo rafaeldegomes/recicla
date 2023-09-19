@@ -1,5 +1,5 @@
 <?php
-require_once "conecta.php";
+   require_once "controller/conecta.php";
 
 // Verificar se a requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,7 +30,7 @@ $sql = "INSERT INTO residuo_coletado (id_usuario, id_ponto_coleta, residuo , hor
 if ($conn->query($sql) === TRUE) {
     header('Location: entrega_residuos.php');
 } else {
-    echo "Erro ao inserir: " . $conn->error;
+   echo "Erro ao inserir: " . $conn->error;
 }
 
 }

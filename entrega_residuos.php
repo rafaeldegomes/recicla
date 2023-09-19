@@ -7,7 +7,8 @@ if (empty($id)) {
 } else {
     require_once "footer.php";
     require_once "controller/conecta.php";
-?>
+?><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
         #map {
             height: 400px;
@@ -87,14 +88,25 @@ if (empty($id)) {
                                         <td><?php echo $record['peso']; ?></td>
                                         <td>
 
+                                            <img src="<?php echo $record['foto']; ?>" class="img-fluid hidden-image" alt="Resíduo" width="150px" style="display: none;">
 
-                                            <img src="<?php echo $record['foto']; ?>" class="img-fluid" alt="Resíduo">
+                                            <button class="showImageBtn" data-img-src="<?php echo $record['foto']; ?>">Mostrar Imagem</button>
+
+
 
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
+                        <script>
+    $(document).ready(function() {
+        $('.showImageBtn').on('click', function() {
+            // Encontre a imagem no mesmo contêiner que o botão clicado e alterne a sua visibilidade
+            $(this).siblings('.hidden-image').toggle();
+        });
+    });
+</script>
 
                         <!-- Bootstrap JS e jQuery -->
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -111,6 +123,14 @@ if (empty($id)) {
     </div>
     <!-- End Page-content -->
 
+    <script>
+        $(document).ready(function() {
+            $('#showImageBtn').click(function() {
+                alert("oi");
+                $('#residuoImage').show();
+            });
+        });
+    </script>
 
 
 <?php

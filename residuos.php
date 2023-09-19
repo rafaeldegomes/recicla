@@ -9,6 +9,7 @@ if (empty($id)) {
     require_once "controller/conecta.php";
 ?>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -35,6 +36,7 @@ if (empty($id)) {
 
                             </div>
                         </div>
+                        
                         <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">

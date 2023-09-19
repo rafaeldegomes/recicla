@@ -8,6 +8,7 @@ if (empty($id)) {
     require_once "footer.php";
     require_once "controller/conecta.php";
 ?>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  
     <!-- ============================================================== -->
@@ -314,7 +315,8 @@ if (empty($id)) {
             </div> <!-- container-fluid -->
         </div>
         <!-- End Page-content -->
-
+        
+</head>
         <!-- end main content-->
         <script>
             window.onload = function() {
@@ -334,6 +336,16 @@ if (empty($id)) {
                     // alert('meuParametro NÃO está presente na URL!');
                 }
                 $('#datatable').DataTable({
+                    dom: 'Biplfrt', 
+        buttons: [
+            'pdfHtml5',
+            {
+                extend: 'copyHtml5',
+                text: 'Copiar'
+            },
+            'excelHtml5'
+        ],
+        lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Mostrar tudo"]],
                     destroy: true,
         language: {
             "sEmptyTable": "Nenhum registro encontrado",

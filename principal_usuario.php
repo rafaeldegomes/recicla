@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once "footer.php";
+require_once "header_usuario.php";
 session_start();
 $id = $_SESSION["usuario_id"];
 $nome = $_SESSION["nome"];
@@ -965,6 +965,6 @@ $nome = $_SESSION["nome"];
                 <!-- End Page-content -->
 <?php 
 
-require_once "header.php";
+require_once "footer_usuario.php";
 
 ?>

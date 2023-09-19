@@ -30,8 +30,11 @@ require_once "conecta.php";
 
             
 
-        } elseif ($nivelUsuario == "usuario_comum") {
-            header("Location: pagina_usuario_comum.php");
+        } elseif ($nivelUsuario == "usuario") {
+            $_SESSION["usuario_id"] = $row["id_usuario"];
+            $_SESSION["usuario_nome"] = $row["nome"];
+            $_SESSION["cargo"] = $row["cargo"];
+            header("Location: ../principal_usuario.php");
         } else {
             // Caso o nível não seja definido, redireciona para uma página padrão
             header("Location: ../index.php?id=1");

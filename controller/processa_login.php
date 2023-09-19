@@ -6,6 +6,7 @@ require_once "conecta.php";
 
     $email = $_POST["email"];
     $senha = md5($_POST["senha"]); // Criptografa a senha usando MD5
+    $selecao = $_POST['tipoUsuario'];
 
     // Consulta o banco de dados para verificar o usuário e seu nível
     $query = "SELECT * FROM usuarios WHERE email='$email' AND senha='$senha'";

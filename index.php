@@ -50,6 +50,22 @@
                                             <div class="text-center mt-1">
                                                 <h4 class="font-size-18">Bem-Vindo!</h4>
                                                 <p class="text-muted">Insira seus dados de acesso à plataforna.</p>
+                                                <br>
+                                                <p class="text-muted">Selecione seu Login</p>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input type="radio" id="usuarioRadio" name="tipoUsuario" value="usuario">
+                                                        <label for="usuarioRadio">Sou Usuário</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="radio" id="servidorRadio" name="tipoUsuario" value="servidor">
+                                                        <label for="servidorRadio">Sou Servidor</label>
+                                                    </div>
+                                                </div>
+
+                                                <br>
+
+
                                             </div>
                                             <!-- Modal para exibir mensagem de erro -->
                                             <div id="errorModal" class="modal">
@@ -133,6 +149,26 @@
                 footer: '<a href="http://reciclatche.com.br/">tente novamente!</a>'
             })
         }
+
+        function seleciona() {
+            Swal.fire({
+                icon: 'error',
+                title: 'É SO UM TESTE DE CLIQUE',
+                text: 'VOCE SELECIONOU ALGO UHUUL',
+                footer: '<a href="http://reciclatche.com.br/">tente novamente!</a>'
+            })
+        }
+        function radioClicked(event) {
+            if (event.target.value === "usuario") {
+                seleciona()
+            } else if (event.target.value === "servidor") {
+                seleciona()
+            }
+        }
+
+        // Adiciona os ouvintes de evento aos radio buttons
+        document.getElementById('usuarioRadio').addEventListener('click', radioClicked);
+        document.getElementById('servidorRadio').addEventListener('click', radioClicked);
     </script>
 
     <!-- JAVASCRIPT -->

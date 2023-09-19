@@ -324,13 +324,13 @@ session_start();
                         <li class="menu-title">Cadastro Operacional</li>
                         
                         <li>
-                            <a href="mapa_coleta.php" class=" waves-effect">
+                            <a href="mapa_coleta_usuario.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Mapa de Coletas</span>
                             </a>
                         </li>
                         <li>
-                            <a href="entrega_residuos.php" class=" waves-effect">
+                            <a href="entrega_residuos_usuario.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
                                 <span>Entrega de Resíduos</span>
                             </a>

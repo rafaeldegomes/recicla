@@ -16,7 +16,7 @@ Apenas um teste
 
 <?php
 	$html = ob_get_contents();
-	ob_end_clean();
+	ob_end_clean(); 
 
 	$mpdf->WriteHTML($html);
 

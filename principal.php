@@ -44,6 +44,6 @@ if(empty($id)){
 <?php 
 
 require_once "header.php";
-echo $nome = $_SESSION["nome"];
+//echo $nome = $_SESSION["nome"];
 }
 ?>

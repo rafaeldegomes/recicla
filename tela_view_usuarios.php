@@ -39,7 +39,7 @@ if (empty($id)) {
                         <?php
 
                         // Consulta SQL para contar os registros
-                        $query_total_usuarios = "SELECT * FROM usuarios where id_usuario = '$id_usuario'";
+                        $query_total_usuarios = "SELECT * FROM usuarios ";
 
                         $result = $conn->query($query_total_usuarios);
 
@@ -59,7 +59,7 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                                 <input class="form-control" type="text" name="nome" id="nome"
                                                     placeholder="Digite o nome do Servidor" id="example-text-input"
-                                                    >
+                                                    value="<?php echo $row['nome']; ?>">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -67,7 +67,7 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                             <input class="form-control" type="text" name="email" id="email"
                                                     placeholder="Digite o email do Servidor" id="example-text-input"
-                                                   >
+                                                    value="<?php echo $row['email']; ?>">
                                             </div>
                                         </div>
 
@@ -78,7 +78,7 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                             <input class="form-control" type="password" name="senha" id="senha"
                                                     placeholder="Digite a senha do Servidor" id="example-text-input"
-                                                    >  
+                                                    value="<?php echo $row['senha']; ?>">  
                                             </div>
                                         </div>
                                         <div class="col">
@@ -86,10 +86,9 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="nivel" id="nivel">
-                                                    <!--<option selected="<?php echo $row['nivel']; ?>"><?php echo $row['nivel']; ?></option>-->
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
+                                                    <option selected="<?php echo $row['nivel']; ?>"><?php echo $row['nivel']; ?></option>
+                                                    <option value="admin">Admin</option>
+                                                    <option value="usuario">Usuario</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -101,7 +100,7 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="cargo" id="cargo">
-                                                   <!-- <option selected="<?php echo $row['classe']; ?>"><?php echo $row['classe']; ?></option> -->
+                                                   <option selected="<?php echo $row['cargo']; ?>"><?php echo $row['cargo']; ?></option> 
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -113,7 +112,7 @@ if (empty($id)) {
                                             <div class="col-sm-10">
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="statususuario" id="statususuario">
-                                                   <!-- <option selected="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option> -->
+                                                  <option selected="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option> 
                                                     <option value="Ativo">Ativo</option>
                                                     <option value="Inativo">Inativo</option>
                                                 </select>

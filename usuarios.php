@@ -10,6 +10,9 @@ if (empty($id)) {
 ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $('#datatable').DataTable().destroy();
+    </script>
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -196,7 +199,7 @@ if (empty($id)) {
                                 </p>-->
 
                                 <div class="table-responsive">
-                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <table id="datatable2" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                         <thead>
                                             <tr>
@@ -226,7 +229,7 @@ if (empty($id)) {
                                                 <td>
                                                     <div class="row">
                                                         <div class="col">
-                                                            <a href='tela_view_usuarios.php?id_residuo=<?php echo $row["id_usuario"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-edit-line"></i></a>
+                                                            <a href='tela_view_usuarios.php?id_usuario=<?php echo $row["id_usuario"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-edit-line"></i></a>
 
 
 
@@ -254,7 +257,9 @@ if (empty($id)) {
         </head>
         <!-- end main content-->
         <script>
+            
             window.onload = function() {
+                  
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
 
@@ -270,7 +275,8 @@ if (empty($id)) {
                 } else {
                     // alert('meuParametro NÃO está presente na URL!');
                 }
-                $('#datatable').DataTable({
+                
+                $('#datatable2').DataTable({
                     dom: 'Biplfrt',
                     buttons: [
                         'pdfHtml5',
@@ -309,7 +315,10 @@ if (empty($id)) {
                         }
                     }
                 });
+                
             }
+
+           
 
             function sucessostatus() {
                 Swal.fire({

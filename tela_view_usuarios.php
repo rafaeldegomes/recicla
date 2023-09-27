@@ -39,7 +39,7 @@ if (empty($id)) {
                         <?php
 
                         // Consulta SQL para contar os registros
-                        $query_total_usuarios = "SELECT * FROM usuarios ";
+                        $query_total_usuarios = "SELECT * FROM usuarios where id_usuario = '$id_usuario'";
 
                         $result = $conn->query($query_total_usuarios);
 
@@ -179,6 +179,6 @@ if (empty($id)) {
         <?php
 
         require_once "header.php";
-        echo $nome = $_SESSION["nome"];
+       // echo $nome = $_SESSION["nome"];
 }
 ?>

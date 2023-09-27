@@ -252,14 +252,14 @@ if (empty($id)) {
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Resíduos Cadastrados</h4>
+                                <h4 class="card-title">Resíduos Cadastrados 2</h4>
                                 <!--<p class="card-title-desc">
                                     Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>
                                     to make them scroll horizontally on small devices (under 768px).
                                 </p>-->
 
                                 <div class="table-responsive">
-                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <table id="datatable2" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                         <thead>
                                             <tr>
@@ -335,7 +335,7 @@ if (empty($id)) {
                 } else {
                     // alert('meuParametro NÃO está presente na URL!');
                 }
-                $('#datatable').DataTable({
+                $('#datatable2').DataTable({
                     dom: 'Biplfrt',
                     buttons: [
                         'pdfHtml5',
@@ -380,7 +380,7 @@ if (empty($id)) {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Residuo atualizado com sucesso',
+                    title: 'Resíduo atualizado com sucesso',
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -390,7 +390,7 @@ if (empty($id)) {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Residuo atualizado com sucesso',
+                    title: 'Resíduo atualizado com sucesso',
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -400,7 +400,7 @@ if (empty($id)) {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Residuo cadastrado com sucesso',
+                    title: 'Resiíduo cadastrado com sucesso',
                     showConfirmButton: false,
                     timer: 1500
                 })

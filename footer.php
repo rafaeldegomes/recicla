@@ -8,7 +8,9 @@ session_start();
 <!-- Mirrored from themesdesign.in/reactly/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jul 2023 16:13:10 GMT -->
 
 <head>
-
+<script>
+    $('#datatable').DataTable().destroy();
+</script>
     <meta charset="utf-8" />
     <title>Dashboard | ReciclaTche</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -370,8 +372,8 @@ session_start();
                         <li>
                             <a href="usuarios.php" class=" waves-effect">
                                 <i class="ri-chat-voice-line"></i>
-                                <span>Usuários</span    >
-                            </a>ß
+                                <span>Servidores</span    >
+                            </a>
                         </li>
 
                         <!-- <li>

@@ -7,7 +7,7 @@ if (empty($id)) {
 } else {
     require_once "footer.php";
     require_once "controller/conecta.php";
-?>
+    ?>
     <style>
         #map {
             height: 400px;
@@ -34,7 +34,9 @@ if (empty($id)) {
 
 
 
-                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap" async defer></script>
+                            <script
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap"
+                                async defer></script>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -44,28 +46,36 @@ if (empty($id)) {
 
                             </div>
                         </div>
-                        <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                        <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog"
+                            aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="myExtraLargeModalLabel">Cadastrar novo Ponto de Coleta</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <h5 class="modal-title" id="myExtraLargeModalLabel">Cadastrar novo Ponto de Coleta
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form action="controller/cadastra_ponto_coleta.php" method="POST">
 
                                             <div class="row">
                                                 <div class="col">
-                                                    <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
-                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome do Ponto de Coleta</label>
+                                                    <input class="form-control" type="hidden" name="id_usuario"
+                                                        id="id_usuario" value="<?php echo $id; ?>">
+                                                    <label for="example-text-input" class="col-sm-6 col-form-label">Nome do
+                                                        Ponto de Coleta</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                                        <input class="form-control" type="text" name="nome" id="nome"
+                                                            placeholder="Digite o nome do Residuo" id="example-text-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Endereço</label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="endereco" id="endereco" placeholder="Digite o nome do Residuo" id="example-text-input">
+                                                        <input class="form-control" type="text" name="endereco"
+                                                            id="endereco" placeholder="Digite o nome do Residuo"
+                                                            id="example-text-input">
 
                                                     </div>
 
@@ -77,7 +87,8 @@ if (empty($id)) {
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Bairro</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="bairro" id="bairro">
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            name="bairro" id="bairro">
                                                             <option selected="">Selecione o Bairro</option>
                                                             <option value="1">Bettim</option>
 
@@ -87,7 +98,8 @@ if (empty($id)) {
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Status</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-select" aria-label="Default select example" name="statusresiduo" id="statusresiduo">
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            name="statusresiduo" id="statusresiduo">
                                                             <option selected="Ativo">Ativo</option>
                                                             <option value="Inativo">Inativo</option>
                                                         </select>
@@ -109,26 +121,32 @@ if (empty($id)) {
                                                             <br>
                                                             <div class="form-group">
                                                                 <label>Dia:</label>
-                                                                <select class="form-select" aria-label="Default select example" name="dia[]" id="dia[]">
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example" name="dia[]"
+                                                                    id="dia[]">
                                                                     <option value="Segunda">Segunda</option>
                                                                     <option value="Terca">Terça</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Hora de Início:</label>
-                                                                <input type="time" name="hora_inicio[]" class="form-control" required>
+                                                                <input type="time" name="hora_inicio[]" class="form-control"
+                                                                    required>
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label>Residuo :</label>
-                                                                <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example" name="hora_fim[]"
+                                                                    id="hora_fim[]">
                                                                     <option selected="Segunda">Plastico</option>
                                                                     <option value="Terca">Lata</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <br>
-                                                        <button type="button" class="btn btn-secondary" id="add-entry">Adicionar mais dias e horários</button>
+                                                        <button type="button" class="btn btn-secondary"
+                                                            id="add-entry">Adicionar mais dias e horários</button>
                                                         <br>
 
                                                     </div>
@@ -146,7 +164,9 @@ if (empty($id)) {
                                                 <div class="col">
                                                 </div>
                                                 <div class="col" style="text-align: right;">
-                                                    <button type="submitt" class="btn btn-primary waves-effect waves-light">Cadastrar Ponto de Coleta</button>
+                                                    <button type="submitt"
+                                                        class="btn btn-primary waves-effect waves-light">Cadastrar Ponto de
+                                                        Coleta</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -182,7 +202,11 @@ if (empty($id)) {
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
                                                 <p class="text-truncate mb-2">Pontos de Coletas Ativos</p>
-                                                <h4 class="mt-2 mb-0"><?php echo $total; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-up"></i> Ativos</sup></h4>
+                                                <h4 class="mt-2 mb-0">
+                                                    <?php echo $total; ?><span
+                                                        class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i
+                                                            class="mdi mdi-arrow-up"></i> Ativos</sup>
+                                                </h4>
                                             </div>
 
                                         </div>
@@ -195,7 +219,11 @@ if (empty($id)) {
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
                                                 <p class="text-truncate mb-2">Pontos de Coletas Inativos</p>
-                                                <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-down"></i> Inativos</sup></h4>
+                                                <h4 class="mt-2 mb-0">
+                                                    <?php echo $total2; ?><span
+                                                        class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i
+                                                            class="mdi mdi-arrow-down"></i> Inativos</sup>
+                                                </h4>
                                             </div>
 
                                         </div>
@@ -213,7 +241,9 @@ if (empty($id)) {
 
                                     </div>
                                     <div class="col-sm" style="text-align: right;">
-                                        <a href="ponto_coleta_cadastro.php"><button type="button" class="btn btn-primary waves-effect waves-light">Cadastrar novo Ponto de Coleta</button></a>
+                                        <a href="ponto_coleta_cadastro.php"><button type="button"
+                                                class="btn btn-primary waves-effect waves-light">Cadastrar novo Ponto de
+                                                Coleta</button></a>
 
                                     </div>
                                 </div>
@@ -225,14 +255,16 @@ if (empty($id)) {
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Resíduos Cadastrados</h4>
+                                <h4 class="card-title">Pontos de Coleta Cadastrados</h4>
                                 <!--<p class="card-title-desc">
                                     Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code>
                                     to make them scroll horizontally on small devices (under 768px).
                                 </p>-->
 
                                 <div class="table-responsive">
-                                    <table class="table mb-0">
+                                    <table class="table mb-0" id="datatable2"
+                                        class="table table-bordered dt-responsive nowrap"
+                                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
@@ -259,15 +291,21 @@ if (empty($id)) {
                                                 <td>
                                                     <div class="row">
                                                         <div class="col">
-                                                            <a href='tela_view_pontocoleta.php?id_residuo=<?php echo $row["id_ponto_coleta"]; ?>' type="button" class="btn btn-warning waves-effect waves-light"><i class="ri-edit-line"></i></a>
+                                                            <a href='tela_view_pontocoleta.php?id_residuo=<?php echo $row["id_ponto_coleta"]; ?>'
+                                                                type="button"
+                                                                class="btn btn-warning waves-effect waves-light"><i
+                                                                    class="ri-edit-line"></i></a>
 
 
 
-                                                            <a href='controller/atualiza_status_pontocoleta.php?id=<?php echo $row["id_ponto_coleta"]; ?>' type="button" class="btn btn-danger waves-effect waves-light"><i class="ri-sensor-fill"></i></a>
+                                                            <a href='controller/atualiza_status_pontocoleta.php?id=<?php echo $row["id_ponto_coleta"]; ?>'
+                                                                type="button" class="btn btn-danger waves-effect waves-light"><i
+                                                                    class="ri-sensor-fill"></i></a>
                                                         </div>
                                                     </div>
                                                 </td>
-                                            <?php
+                                                <?php
+
                                             }
                                             ?>
                                         </tbody>
@@ -286,36 +324,76 @@ if (empty($id)) {
 
         <!-- end main content-->
         <script>
-            document.getElementById('add-entry').addEventListener('click', function() {
+            document.getElementById('add-entry').addEventListener('click', function () {
                 const entryForm = document.getElementById('entry-form');
                 const newEntry = `
-                <br>
-                                                            <div class="form-group">
-                                                            <label>Dia:</label>
-                                                                <select class="form-select" aria-label="Default select example" name="dia[]" id="dia[]">
-                                                                    <option value="Segunda">Segunda</option>
-                                                                    <option value="Terca">Terça</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Hora de Início:</label>
-                                                                <input type="time" name="hora_inicio[]" class="form-control" required>
-                                                            </div>
+                    <br>
+                                                                <div class="form-group">
+                                                                <label>Dia:</label>
+                                                                    <select class="form-select" aria-label="Default select example" name="dia[]" id="dia[]">
+                                                                        <option value="Segunda">Segunda</option>
+                                                                        <option value="Terca">Terça</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label>Hora de Início:</label>
+                                                                    <input type="time" name="hora_inicio[]" class="form-control" required>
+                                                                </div>
                                                             
-                                                            <div class="form-group">
-                                                            <label>Residuo :</label>
-                                                                <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
-                                                                    <option selected="Segunda">Plastico</option>
-                                                                    <option value="Terca">Lata</option>
-                                                                </select>
-                                                            </div>
-        `;
+                                                                <div class="form-group">
+                                                                <label>Residuo :</label>
+                                                                    <select class="form-select" aria-label="Default select example" name="hora_fim[]" id="hora_fim[]">
+                                                                        <option selected="Segunda">Plastico</option>
+                                                                        <option value="Terca">Lata</option>
+                                                                    </select>
+                                                                </div>
+            `;
                 entryForm.insertAdjacentHTML('beforeend', newEntry);
-            });
+                
+                $('#datatable2').DataTable({
+                    dom: 'Biplfrt',
+                    buttons: [
+                        'pdfHtml5',
+                        {
+                            extend: 'copyHtml5',
+                            text: 'Copiar'
+                        },
+                        'excelHtml5'
+                    ],
+                    lengthMenu: [
+                        [10, 25, 50, -1],
+                        [10, 25, 50, "Mostrar tudo"]
+                    ],
+                    destroy: true,
+                    language: {
+                        "sEmptyTable": "Nenhum registro encontrado",
+                        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                        "sInfoPostFix": "",
+                        "sInfoThousands": ".",
+                        "sLengthMenu": "_MENU_ resultados por página",
+                        "sLoadingRecords": "Carregando...",
+                        "sProcessing": "Processando...",
+                        "sZeroRecords": "Nenhum registro encontrado",
+                        "sSearch": "Pesquisar",
+                        "oPaginate": {
+                            "sNext": "Próximo",
+                            "sPrevious": "Anterior",
+                            "sFirst": "Primeiro",
+                            "sLast": "Último"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": Ordenar colunas de forma ascendente",
+                            "sSortDescending": ": Ordenar colunas de forma descendente"
+                        }
+                    }
+                });});
+           
         </script>
-    <?php
+        <?php
 
-    require_once "header.php";
-    echo $nome = $_SESSION["nome"];
+        require_once "header.php";
+        echo $nome = $_SESSION["nome"];
 }
-    ?>
+?>

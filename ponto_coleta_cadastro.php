@@ -234,12 +234,13 @@ if (empty($id)) {
                 map: map,
                 anchorPoint: new google.maps.Point(0, -29)
             });
-
+            buscar();
             const input = document.getElementById('addressInput');
             const autocomplete = new google.maps.places.Autocomplete(input);
             autocomplete.bindTo('bounds', map);
 
             autocomplete.addListener('place_changed', () => {
+                buscar();
                 const place = autocomplete.getPlace();
 
                 if (!place.geometry) {
@@ -284,6 +285,32 @@ if (empty($id)) {
                 }
             });
         });
+
+        function buscar(){
+            const input = document.getElementById('addressInput').value;
+            const geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({
+                address: input
+            }, (results, status) => {
+                if (status === 'OK' && results[0]) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    //alert(results[0].geometry.location);
+                    let latitude = results[0].geometry.location.lat();
+                    let longitude = results[0].geometry.location.lng();
+                    var inputlatitude = document.getElementById('latitude');
+                    inputlatitude.value = latitude;
+                    var inputlongitude = document.getElementById('longitude');
+                    inputlongitude.value = longitude;
+
+                    alert("Latitude: " + latitude + "\nLongitude: " + longitude);
+                    marker.setVisible(true);
+                } else {
+                    window.alert('Nenhum local foi encontrado para o endereço fornecido.');
+                }
+            });
+        }
     </script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap"

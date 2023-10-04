@@ -300,7 +300,7 @@ session_start();
                             <a href="#" class="btn header-item" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg" alt="Header Avatar">
                                 <h6 class="text-uppercase mb-0 mt-2 pt-1"> <?php echo $_SESSION["usuario_nome"]; ?></h6>
-                                <p class="text-muted font-size-13"><?php echo $_SESSION["cargo"]; ?>  - <?php echo $_SESSION["cidade"]; ?></p>
+                                <p class="text-muted font-size-13"><?php echo $_SESSION["cargo"]; ?>   ?></p>
                             </a>
                             <div class="dropdown-menu">
                                 <!-- item-->

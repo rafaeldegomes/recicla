@@ -2,6 +2,7 @@
 session_start();
 
 $id = $_SESSION["usuario_id"];
+$cidade = $_SESSION["cidade"];
 if (empty($id)) {
     header("Location: index.php");
 } else {
@@ -94,7 +95,7 @@ if (empty($id)) {
                         <?php
 
                         // Consulta SQL para contar os registros
-                        $query_total_bairros = "SELECT COUNT(*) as total FROM bairros where id_usuario = '$id' and status = 'Ativo'";
+                        $query_total_bairros = "SELECT COUNT(*) as total FROM bairros where id_cidade = '$cidade' and status = 'Ativo'";
 
                         $result = $conn->query($query_total_bairros);
 
@@ -102,7 +103,7 @@ if (empty($id)) {
                         $row = $result->fetch_assoc();
                         $total = $row['total'];
 
-                        $query_total_bairros2 = "SELECT COUNT(*) as total FROM bairros where id_usuario = '$id' and status = 'Inativo'";
+                        $query_total_bairros2 = "SELECT COUNT(*) as total FROM bairros where id_cidade = '$cidade' and status = 'Inativo'";
 
                         $result2 = $conn->query($query_total_bairros2);
 
@@ -191,7 +192,7 @@ if (empty($id)) {
 
                                             <?php
                                             // Consulta SQL para buscar os dados
-                                            $query = "SELECT * FROM bairros where id_usuario = '$id'";
+                                            $query = "SELECT * FROM bairros where id_cidade = '$cidade'";
 
                                             $result = $conn->query($query);
                                             while ($row = $result->fetch_assoc()) {

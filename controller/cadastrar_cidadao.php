@@ -3,7 +3,7 @@
 require_once "conecta.php";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Usando hash para segurança
+$senha = md5($_POST['senha']); // Usando hash para segurança
 $cidade =  $_POST['cidade'];
 
 // Upload da foto
@@ -16,10 +16,10 @@ $cidade =  $_POST['cidade'];
 //  exit;
 //} 
 
-$sql = "INSERT INTO usuarios (nome, email, senha, cidade ) VALUES ('$nome', '$email', '$senha', '$cidade' )";
+$sql = "INSERT INTO usuarios (nome, email, senha, cidade, nivel, cargo, status) VALUES ('$nome', '$email', '$senha', '$cidade', '' , '', 'Ativo')";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: ../principal_usuario.php?id=1');
+    header('Location: ../principal.php?id=1');
     exit; 
 } else {
     echo "Erro: " . $sql . "<br>" . $conn->error;

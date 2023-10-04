@@ -110,12 +110,12 @@ require_once "controller/conecta.php";
                                                 </div>
                                                 <br>
 
-                                                <div class="form-check">
+                                               <!-- <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value=""
                                                         id="auth-remember-check">
                                                     <label class="form-check-label"
                                                         for="auth-remember-check">Lembrar</label>
-                                                </div>
+                                                </div>-->
 
                                                 <div class="mt-4">
 

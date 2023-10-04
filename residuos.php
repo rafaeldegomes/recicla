@@ -2,6 +2,7 @@
 session_start();
 
 $id = $_SESSION["usuario_id"];
+$cidade = $_SESSION["cidade"];
 if (empty($id)) {
     header("Location: index.php");
 } else {
@@ -53,6 +54,8 @@ if (empty($id)) {
                                                     <label for="example-text-input" class="col-sm-6 col-form-label">Nome comum do resíduo</label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o nome do Resíduo" id="example-text-input">
+                                                        <input class="form-control" type="hidden" name="cidade" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" id="example-text-input">
+                                       
                                                     </div>
                                                 </div>
                                                 <div class="col">
@@ -187,7 +190,7 @@ if (empty($id)) {
                         <?php
 
                         // Consulta SQL para contar os registros
-                        $query_total_residuos = "SELECT COUNT(*) as total FROM residuos where id_usuario = '$id' and status = 'Ativo'";
+                        $query_total_residuos = "SELECT COUNT(*) as total FROM residuos where cidade = '$cidade' and status = 'Ativo'";
 
                         $result = $conn->query($query_total_residuos);
 
@@ -195,7 +198,7 @@ if (empty($id)) {
                         $row = $result->fetch_assoc();
                         $total = $row['total'];
 
-                        $query_total_residuos2 = "SELECT COUNT(*) as total FROM residuos where id_usuario = '$id' and status = 'Inativo'";
+                        $query_total_residuos2 = "SELECT COUNT(*) as total FROM residuos where cidade = '$cidade' and status = 'Inativo'";
 
                         $result2 = $conn->query($query_total_residuos2);
 
@@ -276,7 +279,7 @@ if (empty($id)) {
 
                                             <?php
                                             // Consulta SQL para buscar os dados
-                                            $query = "SELECT id_residuo, nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco,status FROM residuos where id_usuario = '$id'";
+                                            $query = "SELECT id_residuo, nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco,status FROM residuos where cidade = '$cidade'";
 
                                             $result = $conn->query($query);
                                             while ($row = $result->fetch_assoc()) {

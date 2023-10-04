@@ -44,7 +44,8 @@ if (empty($id)) {
                                     </div>
                                     <div class="modal-body">
                                         <form action="controller/cadastra_fornecedores.php" method="POST">
-
+                                        <input class="form-control" type="hidden" name="cidade" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" id="example-text-input">
+                                                   
                                             <div class="row">
                                                 <div class="col">
                                                     <input class="form-control" type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>"> 

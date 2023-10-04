@@ -62,7 +62,9 @@ if (empty($id)) {
                                                     <label class="col-sm-6 col-form-label">Email</label>
                                                     <div class="col-sm-10">
                                                     <input class="form-control" type="text" name="email" id="email" placeholder="Digite seu Email" id="example-text-input">
-                                                    </div>
+                                                    <input class="form-control" type="hidden" name="cidade" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" id="example-text-input">
+                                                        
+                                                </div>
 
                                                 </div>
 

@@ -6,8 +6,8 @@ $email = $_POST['email'];
 $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Usando hash para segurança
 $nivel = $_POST['nivel'];
 $cargo = $_POST['cargo'];
-$status = $_POST['statususuario'];;
-$cidade =  1;
+$status = $_POST['statususuario'];
+$cidade =  $_POST['cidade'];
 
 // Upload da foto
 //$target_dir = "uploads/"; // Defina a pasta de upload

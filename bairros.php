@@ -192,7 +192,7 @@ if (empty($id)) {
 
                                             <?php
                                             // Consulta SQL para buscar os dados
-                                            $query = "SELECT * FROM bairros where id_cidade = '$cidade'";
+                                            $query = "SELECT * FROM bairros where id_cidade = $cidade";
 
                                             $result = $conn->query($query);
                                             while ($row = $result->fetch_assoc()) {

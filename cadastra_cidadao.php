@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
+<?php 
 
+require_once "controller/conecta.php";
+?>
 
 <!-- Mirrored from themesdesign.in/reactly/layouts/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jul 2023 16:15:12 GMT -->
 
@@ -8,7 +11,7 @@
 
     <meta charset="utf-8" />
 
-    <title>Login | ReciclaTche</title>
+    <title>Cadastro</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
@@ -37,8 +40,10 @@
                     <div>
                         <div class="text-center mb-4">
                             <a href="index.html" class="">
-                                <img src="assets/images/logofinalsite.png" alt="" height="100" class="auth-logo logo-dark mx-auto">
-                                <img src="assets/images/logofinalsite.png" alt="" height="100" class="auth-logo logo-light mx-auto">
+                                <img src="assets/images/logofinalsite.png" alt="" height="100"
+                                    class="auth-logo logo-dark mx-auto">
+                                <img src="assets/images/logofinalsite.png" alt="" height="100"
+                                    class="auth-logo logo-light mx-auto">
                             </a>
                         </div>
 
@@ -48,41 +53,74 @@
                                     <div class="card-body">
                                         <div class="p-3">
                                             <div class="text-center mt-1">
-                                                <h4 class="font-size-18">Bem-Vindo!</h4>
-                                                <p class="text-muted">Insira seus dados de acesso à plataforna.</p>
+                                                <h4 class="font-size-18">Realize seu Cadastro!</h4>
+                                                <p class="text-muted">Insira seus dados</p>
                                                 <br>
-                                               
+
                                                 <br>
 
 
                                             </div>
                                             <!-- Modal para exibir mensagem de erro -->
                                             <div id="errorModal" class="modal">
-                                                <span onclick="fecharModal()" style="float: right; cursor: pointer;">&times;</span>
+                                                <span onclick="fecharModal()"
+                                                    style="float: right; cursor: pointer;">&times;</span>
                                                 <p id="errorMessage"></p>
                                             </div>
 
                                             <!-- Script para exibir a modal de erro, caso haja algum erro -->
 
-                                            <form action="controller/processa_login.php" method="post" class="auth-input">
+                                            <form action="controller/cadastrar_cidadao.php" method="post"
+                                                class="auth-input">
+                                                <div class="mb-2">
+                                                    <label for="username" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" id="nome" name="nome"
+                                                        placeholder="Digite seu Nome">
+                                                </div>
+
                                                 <div class="mb-2">
                                                     <label for="username" class="form-label">Email</label>
-                                                    <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu Email">
+                                                    <input type="text" class="form-control" id="email" name="email"
+                                                        placeholder="Digite seu Email">
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Senha</label>
-                                                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua Senha">
+                                                    <input type="password" class="form-control" id="senha" name="senha"
+                                                        placeholder="Digite sua Senha">
                                                 </div>
+                                                <label for="username" class="form-label">Cidade</label>
+                                                
+                                                <div class="mb-3">
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        name="cidade" id="cidade">
+                                                        <option selected="">Selecione a Cidade</option>
+                                                        <?php
+                                                        $sql = "SELECT * FROM cidade";
+                                                        $result = $conn->query($sql);
+                                                        while ($row = $result->fetch_assoc()) {
+                                                            ?>
+                                                            <option value="<?php echo $row["id_cidade"]; ?>">
+                                                                <?php echo $row["nome"]; ?>
+                                                            </option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                                <br>
 
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="auth-remember-check">
-                                                    <label class="form-check-label" for="auth-remember-check">Lembrar</label>
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="auth-remember-check">
+                                                    <label class="form-check-label"
+                                                        for="auth-remember-check">Lembrar</label>
                                                 </div>
 
                                                 <div class="mt-4">
 
-                                                    <button class="btn btn-primary w-100" type="submit">Entrar</button>
+                                                    <button class="btn btn-primary w-100"
+                                                        type="submit">Cadastrar</button>
                                                 </div>
 
                                                 <!--<div class="mt-4 pt-2 text-center">
@@ -100,10 +138,13 @@
                                         </div>
 
                                         <div class="mt-4 text-center">
-                                            <p>Não tem uma conta? <a href="cadastra_cidadao.php" class="fw-medium text-primary">Cadastre-se aqui</a> </p>
-                                            <p>© <script>
+
+                                            <p>©
+                                                <script>
                                                     document.write(new Date().getFullYear())
-                                                </script> Reactly. Crafted with <i class="mdi mdi-heart text-danger"></i> o Coração e Chimarrão</p>
+                                                </script> Reactly. Crafted with <i
+                                                    class="mdi mdi-heart text-danger"></i> o Coração e Chimarrão
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +157,7 @@
         </div>
     </div>
     <script>
-        window.onload = function() {
+        window.onload = function () {
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
 
@@ -139,7 +180,7 @@
             })
         }
 
-        
+
     </script>
 
     <!-- JAVASCRIPT -->

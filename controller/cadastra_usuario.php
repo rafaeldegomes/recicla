@@ -7,6 +7,7 @@ $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Usando hash para s
 $nivel = $_POST['nivel'];
 $cargo = $_POST['cargo'];
 $status = $_POST['statususuario'];;
+$cidade =  1;
 
 // Upload da foto
 //$target_dir = "uploads/"; // Defina a pasta de upload
@@ -18,7 +19,7 @@ $status = $_POST['statususuario'];;
 //  exit;
 //} 
 
-$sql = "INSERT INTO usuarios (nome, email, senha, nivel, cargo, status ) VALUES ('$nome', '$email', '$senha', '$nivel', '$cargo', '$status')";
+$sql = "INSERT INTO usuarios (nome, email, senha, nivel, cargo, status, cidade ) VALUES ('$nome', '$email', '$senha', '$nivel', '$cargo', '$status', '$cidade' )";
 
 if ($conn->query($sql) === TRUE) {
     header('Location: ../usuarios.php?id=1');

@@ -54,7 +54,7 @@ if (empty($id)) {
                             die("Connection failed: " . $connection->connect_error);
                         }
 
-                        $query = "SELECT * FROM residuo_coletado";
+                        $query = "SELECT * FROM residuo_coletado where $id = id_usuario" ;
                         $result = $connection->query($query);
                         $records = [];
 

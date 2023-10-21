@@ -204,15 +204,15 @@ if (empty($id)) {
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal 1</h5>
+                    <h5 class="modal-title">Envie seu Resíduo</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
                     <form action="cadastrar_coleta.php" method="POST" enctype="multipart/form-data">
                         <!-- Input para receber o ID -->
-                        <input type="text" id="inputId" name="inputId">
-                        <input type="text" id="inputIdusuario" name="inputIdusuario">
+                        <input type="hidden" id="inputId" name="inputId">
+                        <input type="hidden" id="inputIdusuario" name="inputIdusuario">
 
                         <div class="form-group">
                             <label for="residuo">Tipo de Resíduo:</label>
@@ -224,23 +224,24 @@ if (empty($id)) {
                                 <option value="organico">Orgânico</option>
                             </select>
                         </div>
-
+                         <br>
                         <div class="form-group">
                             <label for="horario">Horário:</label>
                             <input type="time" class="form-control" id="horario" name="horario">
                         </div>
+                          <br>
                         <div class="form-group">
-                            <label for="horario">peso:</label>
+                            <label for="horario">Peso:</label>
                             <input type="text" class="form-control" id="peso" name="peso">
                         </div>
-
+                         <br>
                         <div class="form-group">
                             <label for="foto">Foto:</label>
                             <input type="file" class="form-control-file" id="foto" name="foto" onchange="loadImage(event)">
                             <br>
                             <img id="outputImage" width="200">
                         </div>
-
+                         <br>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
 
@@ -248,7 +249,7 @@ if (empty($id)) {
                 </div>
                 <div class="modal-footer">
                     <!-- Toggle to second dialog -->
-                    <button class="btn btn-primary" data-bs-target="#secondmodal" data-bs-toggle="modal" data-bs-dismiss="modal">Open Second Modal</button>
+                   
                 </div>
             </div>
         </div>

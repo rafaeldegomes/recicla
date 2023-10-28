@@ -28,17 +28,19 @@ require_once "conecta.php";
             $_SESSION["usuario_nome"] = $row["nome"];
             $_SESSION["cargo"] = $row["cargo"];
             $_SESSION["cidade"] = $row["cidade"];
-
+            $_SESSION["nivel"] = $row["nivel"];
             
 
         } elseif ($nivelUsuario == "usuario") {
+            header("Location: ../principal_usuario.php");
             $_SESSION["usuario_id"] = $row["id_usuario"];
             $_SESSION["usuario_nome"] = $row["nome"];
             $_SESSION["cargo"] = $row["cargo"];
             $_SESSION["cidade"] = $row["cidade"];
+            $_SESSION["nivel"] = $row["nivel"];
 
             
-            header("Location: ../principal_usuario.php");
+            
         } else {
             // Caso o nível não seja definido, redireciona para uma página padrão
             header("Location: ../index.php?id=1");

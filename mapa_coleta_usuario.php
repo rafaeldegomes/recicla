@@ -63,7 +63,7 @@ if (empty($id)) {
                                     'nome' => $row['nome'],
                                     'endereco' => $row['endereco'],
                                     'bairro' => $row['bairro'],
-                                    'id_usuario' => $row['id_usuario'],
+                                    'id_usuario' => $id,
                                     'status' => $row['status'],
                                     'latitude' => $row['latitude'],
                                     'longitude' => $row['longitude'],
@@ -209,10 +209,10 @@ if (empty($id)) {
                 </div>
                 <div class="modal-body">
 
-                    <form action="cadastrar_coleta.php" method="POST" enctype="multipart/form-data">
+                    <form action="cadastrar_coleta_usuario.php" method="POST" enctype="multipart/form-data">
                         <!-- Input para receber o ID -->
                         <input type="hidden" id="inputId" name="inputId">
-                        <input type="hidden" id="inputIdusuario" name="inputIdusuario">
+                        <input type="hidden" id="inputIdusuario" name="inputIdusuario" value="<?php echo $id; ?>">
 
                         <div class="form-group">
                             <label for="residuo">Tipo de Resíduo:</label>

@@ -2,7 +2,8 @@
 session_start();
 
 $id = $_SESSION["usuario_id"];
-if (empty($id)) {
+$nivel = $_SESSION["nivel"];
+if (empty($id) || $nivel == "usuario") {
     header("Location: index.php");
 } else {
     require_once "footer.php";

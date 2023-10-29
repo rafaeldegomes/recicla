@@ -378,7 +378,7 @@ session_start();
 
                         <li>
                             <a href="sair.php" class=" waves-effect">
-                               <i class="ri-close-line align-middle me-2"></i> 
+                               <i class="ri-close-line align-middle me-2" style="color:red"></i> 
                                 <font color="red"><span >Sair</span></font>
                             </a>
                         </li> 

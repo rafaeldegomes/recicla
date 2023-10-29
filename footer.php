@@ -376,6 +376,17 @@ session_start();
                             </a>
                         </li>
 
+                        <li>
+                            <a href="sair.php" class=" waves-effect">
+                               <i class="ri-close-line align-middle me-2"></i> 
+                                <font color="red"><span >Sair</span></font>
+                            </a>
+                        </li> 
+                    
+                       <!-- <button type="button" class="btn btn-danger waves-effect waves-light">
+                                                <i class="ri-close-line align-middle me-2"></i> Sair
+                                            </button> -->
+
                         <!-- <li>
                                 <a href="apps-todo.html" class=" waves-effect">
                                     <i class="ri-task-line"></i>

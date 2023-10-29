@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require_once "header_usuario.php";
-session_start();
+//session_start();
 $id = $_SESSION["usuario_id"];
 $nome = $_SESSION["nome"];
 ?>

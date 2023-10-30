@@ -76,6 +76,7 @@ session_start();
                     <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
                         <i class="ri-menu-2-line align-middle"></i>
                     </button>
+                   
 
                     <!-- App Search-->
                     <form class="app-search d-none d-lg-block">
@@ -101,6 +102,7 @@ session_start();
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="submit"><i class="ri-search-line"></i></button>
                                         </div>
+                                    
                                     </div>
                                 </div>
                             </form>
@@ -134,18 +136,19 @@ session_start();
                             </a>
                         </div>
                     </div>
+        
 
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="ri-apps-2-line"></i>
                         </button>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                             <div class="px-lg-2">
                                 <div class="row g-0">
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/github.png" alt="Github">
-                                            <span>GitHub</span>
+                                        <img src="assets/images/brands/github.png" alt="github">
+                                            <span>GitHub</span>                                           
                                         </a>
                                     </div>
                                     <div class="col">
@@ -154,7 +157,7 @@ session_start();
                                             <span>Bitbucket</span>
                                         </a>
                                     </div>
-                                    <div class="col">
+                                  <div class="col">
                                         <a class="dropdown-icon-item" href="#">
                                             <img src="assets/images/brands/dribbble.png" alt="dribbble">
                                             <span>Dribbble</span>
@@ -180,11 +183,11 @@ session_start();
                                             <img src="assets/images/brands/slack.png" alt="slack">
                                             <span>Slack</span>
                                         </a>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
@@ -282,6 +285,11 @@ session_start();
                             <i class="ri-settings-2-line"></i>
                         </button>
                     </div>
+                    <div class="col">
+                                        <a class="dropdown-icon-item" href="sair.php">
+                                        <i class=" ri-login-box-line" style="color:red; font-size: 1.5em;" ></i>                                       
+                                        </a>
+                                    </div>
 
                 </div>
             </div>
@@ -376,12 +384,12 @@ session_start();
                             </a>
                         </li>
 
-                        <li>
+                       <!-- <li>
                             <a href="sair.php" class=" waves-effect">
                                <i class="ri-close-line align-middle me-2" style="color:red"></i> 
                                 <font color="red"><span >Sair</span></font>
                             </a>
-                        </li> 
+                        </li> -->
                     
                        <!-- <button type="button" class="btn btn-danger waves-effect waves-light">
                                                 <i class="ri-close-line align-middle me-2"></i> Sair

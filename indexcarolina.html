@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+}
+
+.outer-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5b25c;
+    min-height: 280px;
+}
+
+.inner-div {
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 576px;
+}
+
+@media (max-width: 600px) {
+    .inner-div {
+        padding: 10px;
+    }
+}
+
+    </style>
+    <title>Responsividade</title>
+</head>
+<body>
+    <div class="outer-div">
+        <div class="inner-div">
+            <img src="https://www.ufrgs.br/10enac/wp-content/uploads/2023/09/LOGO_positivo-1024x576.png" alt="Logo" class="responsive-image"/>
+        </div>
+    </div>
+</body>
+</html>

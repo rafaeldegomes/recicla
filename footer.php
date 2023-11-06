@@ -4,9 +4,6 @@ session_start();
 <!doctype html>
 <html lang="br">
 
-
-<!-- Mirrored from themesdesign.in/reactly/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jul 2023 16:13:10 GMT -->
-
 <head>
 <script>
     $('#datatable').DataTable().destroy();

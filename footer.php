@@ -290,9 +290,12 @@ session_start();
                                         <i class=" ri-login-box-line" style="color:red; font-size: 1.5em;" ></i>                                       
                                         </a>
                                     </div>
+                                    
 
                 </div>
+                
             </div>
+            
         </header>
 
         <!-- ========== Left Sidebar Start ========== -->

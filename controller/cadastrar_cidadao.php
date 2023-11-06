@@ -1,10 +1,10 @@
 <?php
 
 require_once "conecta.php";
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$senha = md5($_POST['senha']); // Usando hash para segurança
-$cidade =  $_POST['cidade'];
+ $nome = $_POST['nome'];
+ $email = $_POST['email'];
+ $senha = md5($_POST['senha']); // Usando hash para segurança
+ $cidade =  $_POST['cidade'];
 
 // Upload da foto
 //$target_dir = "uploads/"; // Defina a pasta de upload
@@ -16,7 +16,7 @@ $cidade =  $_POST['cidade'];
 //  exit;
 //} 
 
-$sql = "INSERT INTO usuarios (nome, email, senha, cidade, nivel, cargo, status) VALUES ('$nome', '$email', '$senha', '$cidade', '' , '', 'Ativo')";
+$sql = "INSERT INTO usuarios (nome, email, senha, cidade, nivel, cargo, status) VALUES ('$nome', '$email', '$senha', '$cidade', 'usuario' , '', 'Ativo')";
 
 if ($conn->query($sql) === TRUE) {
     header('Location: ../principal.php?id=1');

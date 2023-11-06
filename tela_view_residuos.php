@@ -3,8 +3,9 @@ session_start();
 
 $id = $_SESSION["usuario_id"];
 $id_residuo = $_GET['id_residuo'];
-if (empty($id)) {
-    header("Location: index.php");
+$nivel = $_SESSION["nivel"];
+if (empty($id) || $nivel == "usuario") {
+        header("Location: index.php");
 } else {
 
     require_once "footer.php";

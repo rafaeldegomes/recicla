@@ -33,7 +33,7 @@ if (empty($id) || $nivel == "usuario") {
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Pagina Inicial</li>
+                                    <li class="breadcrumb-item active">Página Inicial</li>
                                 </ol>
 
                             </div>
@@ -172,6 +172,21 @@ if (empty($id) || $nivel == "usuario") {
                                                 </div>
                                             </div>
                                             <hr>
+                                            <div class="row">
+                                            <div class="col">
+                                                    <label class="col-sm-6 col-form-label">Unidade de Medida</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example" name="unidade_medida" id="unidade_medida">
+                                                            <option selected="">I - Substancias que apresentam auto risco</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                </div>
+
+                                                <hr>
 
                                             <div class="row">
                                                 <div class="col">

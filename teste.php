@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Estilo CSS para DataTables -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
-
-<!-- Biblioteca jQuery -->
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Script JS para DataTables -->
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfico de Barras</title>
+  <!-- Adicione o link para o Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  
 </head>
 <body>
-<script>
-    $(document).ready( function () {
-        $('#myTable').DataTable();
-    });
-</script>
+<div>
+  <canvas id="myChart"></canvas>
+</div>
 
-<table id="myTable">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Profissão</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>João</td>
-            <td>30</td>
-            <td>Engenheiro</td>
-        </tr>
-        <tr>
-            <td>Maria</td>
-            <td>25</td>
-            <td>Médica</td>
-        </tr>
-        <tr>
-            <td>Fernando</td>
-            <td>28</td>
-            <td>Designer</td>
-        </tr>
-        <!-- ... Adicione mais linhas conforme necessário ... -->
-    </tbody>
-</table>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 
 </body>
 </html>

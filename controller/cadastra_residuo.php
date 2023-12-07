@@ -18,7 +18,7 @@ $id = $_POST['id_usuario'];
 $cidade = $_POST['cidade'];
 
 // Prepare e execute a query
-$query = "INSERT INTO residuos (nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco, grupo_embalagem,status,cidade) VALUES ('$nome', '$tipo_residuo', '$categoria', '$tecnologia_tratamento', '$classe', '$unidade_medida', '$classe_risco_principal', '$classe_risco_sub', '$numero_risco', '$grupo_embalagem', '$status', '$id', '$cidade')";
+$query = "INSERT INTO residuos (nome, tipo_residuo, categoria, tecnologia_tratamento, classe, unidade_medida, classe_risco_principal, classe_risco_sub, numero_risco, grupo_embalagem,status,cidade) VALUES ('$nome', '$tipo_residuo', '$categoria', '$tecnologia_tratamento', '$classe', '$unidade_medida', '$classe_risco_principal', '$classe_risco_sub', '$numero_risco', '$grupo_embalagem', '$status', '$cidade')";
 
 if ($conn->query($query) === TRUE) {
     header('Location: ../residuos.php?id=1');

@@ -33,7 +33,7 @@ if (empty($id) || $nivel == "usuario") {
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                             <h4 class="mb-sm-0">Pontos de Coleta</h4>
 
-                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&libraries=places&callback=initMap" async defer></script>
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Knw6xhOO2eU4lwwJ7xi_r0fwHHZvzyo&libraries=places&callback=initMap" async defer></script>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -187,7 +187,7 @@ if (empty($id) || $nivel == "usuario") {
                                     $('#firstmodal').modal('show'); // Abre o modal usando jQuery e Bootstrap
                                 }
                             </script>
-                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsJ7BiAuRUTKuXYG0G8yv48SA5g6FQEys&callback=initMap">
+                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Knw6xhOO2eU4lwwJ7xi_r0fwHHZvzyo&callback=initMap">
                             </script>
                     </div>
 

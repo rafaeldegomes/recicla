@@ -51,6 +51,7 @@ if (empty($id) || $nivel == "usuario") {
                                         <form action="controller/cadastra_bairro.php" method="POST">
                                             <div class="row">
                                                 <div class="col">
+                                                <input class="form-control" type="hidden" name="cidade" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" id="example-text-input">
                                                     <input class="form-control" type="hidden" name="id_usuario"
                                                         id="id_usuario" value="<?php echo $id; ?>">
                                                     <label for="example-text-input" class="col-sm-6 col-form-label">Nome do

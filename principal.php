@@ -24,7 +24,7 @@ if (empty($id)|| $nivel == "usuario") {
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Pagina Inicial</h4>
+                        <h4 class="mb-sm-0">Página Inicial</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -122,13 +122,13 @@ if (empty($id)|| $nivel == "usuario") {
                         <div class="card-body">
                             <div class="float-end">
                                 <select class="form-select form-select-sm">
-                                    <option selected="">Apr</option>
+                                    <option selected="">Abr</option>
                                     <option value="1">Mar</option>
-                                    <option value="2">Feb</option>
+                                    <option value="2">Fev</option>
                                     <option value="3">Jan</option>
                                 </select>
                             </div>
-                            <h4 class="card-title">Social Source</h4>
+                            <h4 class="card-title">Resíduos</h4>
 
                             <div id="pie-chart"
                                 style="height: 280px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"
@@ -140,7 +140,7 @@ if (empty($id)|| $nivel == "usuario") {
                                 </div>
                                 <div class=""
                                     style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(-129px, 98px, 0px); border-color: rgb(65, 204, 131); pointer-events: none; visibility: hidden; opacity: 0;">
-                                    Total sales <br>Facebook : 1548 (60.42%)</div>
+                                    Total Resíduo <br>Metal : 1548 (60.42%)</div>
                             </div>
 
 
@@ -148,14 +148,14 @@ if (empty($id)|| $nivel == "usuario") {
                                 <div class="row align-items-center g-0 mt-2 pt-2">
                                     <div class="col-sm-2">
                                         <h6 class="text-truncate mb-0"><i
-                                                class="mdi mdi-circle font-size-10 text-primary me-2"></i> Facebook
+                                                class="mdi mdi-circle font-size-10 text-primary me-2"></i> Metal 10%
                                         </h6>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="progress" style="height: 6px;">
                                             <div class="progress-bar progress-bar progress-bar-striped bg-primary"
-                                                role="progressbar" style="width: 80%" aria-valuenow="80"
-                                                aria-valuemin="0" aria-valuemax="80">
+                                                role="progressbar" style="width: 10%" aria-valuenow="80"
+                                                aria-valuemin="0" aria-valuemax="80"> 
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@ if (empty($id)|| $nivel == "usuario") {
                                 <div class="row align-items-center g-0 mt-3 pt-1">
                                     <div class="col-sm-2">
                                         <h6 class="text-truncate mb-0"><i
-                                                class="mdi mdi-circle font-size-10 text-success me-2"></i> Website </h6>
+                                                class="mdi mdi-circle font-size-10 text-success me-2"></i> Papel </h6>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="progress" style="height: 6px;">
@@ -179,7 +179,7 @@ if (empty($id)|| $nivel == "usuario") {
                                 <div class="row align-items-center g-0 mt-3 pt-1">
                                     <div class="col-sm-2">
                                         <h6 class="text-truncate mb-0"><i
-                                                class="mdi mdi-circle font-size-10 text-purple me-2"></i> E-comme..
+                                                class="mdi mdi-circle font-size-10 text-purple me-2"></i> Papelão
                                         </h6>
                                     </div>
                                     <div class="col-sm-2">
@@ -195,7 +195,7 @@ if (empty($id)|| $nivel == "usuario") {
                                 <div class="row align-items-center g-0 mt-3 pt-1">
                                     <div class="col-sm-2">
                                         <h6 class="text-truncate mb-0"><i
-                                                class="mdi mdi-circle font-size-10 text-danger me-2"></i> Instagram
+                                                class="mdi mdi-circle font-size-10 text-danger me-2"></i> Plástico
                                         </h6>
                                     </div>
                                     <div class="col-sm-2">
@@ -211,7 +211,7 @@ if (empty($id)|| $nivel == "usuario") {
                                 <div class="row align-items-center g-0 mt-3 pt-1">
                                     <div class="col-sm-2">
                                         <h6 class="text-truncate mb-0"><i
-                                                class="mdi mdi-circle font-size-10 text-warning me-2"></i> Google </h6>
+                                                class="mdi mdi-circle font-size-10 text-warning me-2"></i> Vidro </h6>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="progress" style="height: 6px;">

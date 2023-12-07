@@ -79,7 +79,7 @@ if (empty($id)) {
                             <tbody>
                                 <?php foreach ($records as $record) : ?>
                                     <tr>
-                                        <td><?php echo $record['id']; ?></td>
+                                        <td><?php echo $record['id_residuo_coletado']; ?></td>
                                         <td><?php echo $record['id_usuario']; ?></td>
                                         <td><?php echo $record['id_ponto_coleta']; ?></td>
                                         <td><?php echo $record['residuo']; ?></td>

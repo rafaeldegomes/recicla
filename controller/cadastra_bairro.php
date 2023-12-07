@@ -6,9 +6,9 @@ require_once "conecta.php";
 $nome = $_POST['nome'];
 $status = $_POST['statusbairro'];
 $id = $_POST['id_usuario'];
-
+$cidade = $_POST["cidade"];
 // Prepare e execute a query
-$query = "INSERT INTO bairros (nome, status, id_usuario) VALUES ('$nome', '$status', '$id')";
+$query = "INSERT INTO bairros (nome, status, id_usuario, id_cidade) VALUES ('$nome', '$status', '$id', '$cidade')";
 
 if ($conn->query($query) === TRUE) {
     header('Location: ../bairros.php?id=1');

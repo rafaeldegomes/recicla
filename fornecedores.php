@@ -60,7 +60,7 @@ if (empty($id) || $nivel == "usuario") {
                                                     <div class="col-sm-10">
                                                         <select class="form-select" aria-label="Default select example" name="tipo_resíduo" id="tipo_resíduo">
                                                             <option selected="Reciclavel">Reciclável</option>
-                                                            <option value="Reciclavel">Reciclável</option>
+                                                            <option value="Reciclavel">Não reciclável</option>
                                                         </select>
                                                     </div>
 
@@ -145,7 +145,7 @@ if (empty($id) || $nivel == "usuario") {
                                         <div class="d-flex flex-wrap pb-3 gap-3">
                                             <div class="flex-grow-1 overflow-hidden">
                                                 <p class="text-truncate mb-2">Fornecedores Inativos</p>
-                                                <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i class="mdi mdi-arrow-down"></i> Inativos</sup></h4>
+                                                <h4 class="mt-2 mb-0"><?php echo $total2; ?><span class="badge bg-subtle-danger text-danger font-size-10 ms-1"><i class="mdi mdi-arrow-down"></i> Inativos</sup></h4>
                                             </div>
 
                                         </div>

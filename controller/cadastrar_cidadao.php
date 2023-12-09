@@ -16,7 +16,7 @@ require_once "conecta.php";
 //  exit;
 //} 
 
-$sql = "INSERT INTO usuarios (nome, email, senha, cidade, nivel, cargo, status) VALUES ('$nome', '$email', '$senha', '$cidade', 'usuario' , '', 'Ativo')";
+$sql = "INSERT INTO usuarios (nome, email, senha, cidade, nivel, cargo, status) VALUES ('$nome', '$email', '$senha', '$cidade', 'usuario' , 'cidadao', 'Ativo')";
 
 if ($conn->query($sql) === TRUE) {
     header('Location: ../principal.php?id=1');

@@ -273,6 +273,16 @@ session_start();
                             <i class="ri-settings-2-line"></i>
                         </button>
                     </div>
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                            <i class="ri-settings-2-line"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                                        <a class="dropdown-icon-item" href="sair.php">
+                                        <i class=" ri-login-box-line" style="color:red; font-size: 1.5em;" ></i>                                       
+                                        </a>
+                                    </div>
 
                 </div>
             </div>
@@ -316,7 +326,7 @@ session_start();
                         <li class="menu-title">Menu</li>
 
                         <li>
-                            <a href="index.html" class="waves-effect">
+                            <a href="principal_usuario.php" class="waves-effect">
                                 <i class="ri-dashboard-2-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
                                 <span>Dashboard</span>
                             </a>

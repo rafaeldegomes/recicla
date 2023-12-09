@@ -140,7 +140,7 @@ if (empty($id) || $nivel == "usuario") {
                                                 <p class="text-truncate mb-2">Bairros Inativos</p>
                                                 <h4 class="mt-2 mb-0">
                                                     <?php echo $total2; ?><span
-                                                        class="badge bg-subtle-primary text-primary font-size-10 ms-1"><i
+                                                        class="badge bg-subtle-danger text-danger font-size-10 ms-1"><i
                                                             class="mdi mdi-arrow-down"></i>Inativos</sup>
                                                 </h4>
                                             </div>

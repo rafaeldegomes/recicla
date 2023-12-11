@@ -69,10 +69,10 @@ if (empty($id) || $nivel == "usuario") {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="tipo_residuo" id="tipo_residuo">
                                                     <option selected="<?php echo $row['tipo_residuo']; ?>"><?php echo $row['tipo_residuo']; ?></option>
-                                                    <option value="1">Reciclaveis</option>
-                                                    <option value="2">Rejeitos</option>
-                                                    <option value="3">Orgânicos</option>
-                                                    <option value="4">Perigosos</option>
+                                                    <option value="Reciclaveis">Reciclaveis</option>
+                                                    <option value="Rejeitos">Rejeitos</option>
+                                                    <option value="Orgânicos">Orgânicos</option>
+                                                    <option value="Perigosos">Perigosos</option>
 
                                                 </select>
                                             </div>
@@ -86,8 +86,8 @@ if (empty($id) || $nivel == "usuario") {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="categoria" id="categoria">
                                                     <option selected="<?php echo $row['categoria']; ?>"><?php echo $row['categoria']; ?></option>
-                                                    <option value="1">Reciclavel</option>
-                                                    <option value="2">Não Reciclavel</option>
+                                                    <option value="Reciclavel">Reciclavel</option>
+                                                    <option value="Não Reciclavel">Não Reciclavel</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -97,9 +97,9 @@ if (empty($id) || $nivel == "usuario") {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="tecnologia_tratamento" id="tecnologia_tratamento">
                                                     <option selected="<?php echo $row['tecnologia_tratamento']; ?>"><?php echo $row['tecnologia_tratamento']; ?></option>
-                                                    <option value="1">Mecânico</option>
-                                                    <option value="2">Bioquímico</option>
-                                                    <option value="3">Térmico</option>
+                                                    <option value="Mecânico">Mecânico</option>
+                                                    <option value="Bioquímico">Bioquímico</option>
+                                                    <option value="Térmico">Térmico</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -112,10 +112,10 @@ if (empty($id) || $nivel == "usuario") {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="classe" id="classe">
                                                     <option selected="<?php echo $row['classe']; ?>"><?php echo $row['classe']; ?></option>
-                                                    <option value="1">Classe I - Perigosos</option>
-                                                    <option value="2">Classe II - Não Perigosos</option>
-                                                    <option value="3">Classe II A - Não Inertes</option>
-                                                    <option value="3">Classe II B - Inertes</option>
+                                                    <option value="Classe I - Perigosos">Classe I - Perigosos</option>
+                                                    <option value="Classe II - Não Perigosos">Classe II - Não Perigosos</option>
+                                                    <option value="Classe II A - Não Inertes">Classe II A - Não Inertes</option>
+                                                    <option value="Classe II B - Inertes">Classe II B - Inertes</option>
 
                                                 </select>
                                             </div>

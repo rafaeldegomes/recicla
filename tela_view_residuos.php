@@ -143,7 +143,7 @@ if (empty($id) || $nivel == "usuario") {
                                                     name="numero_risco" id="numero_risco">
                                                     <option selected="<?php echo $row['numero_risco']; ?>"><?php echo $row['numero_risco']; ?></option>
 
-                                                    <option value="1">3090</option>
+                                                    <option value="3090">3090</option>
                                                     <option value="2">3091</option>
                                                     <option value="3">3480</option>
                                                     <option value="3">3481</option>

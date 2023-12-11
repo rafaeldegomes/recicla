@@ -32,7 +32,7 @@ if (empty($id) || $nivel == "usuario") {
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Pagina Inicial</li>
+                                    <li class="breadcrumb-item active">Página Inicial</li>
                                 </ol>
 
                             </div>
@@ -68,8 +68,10 @@ if (empty($id) || $nivel == "usuario") {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="tipo_resíduo" id="tipo_resíduo">
                                                     <?php echo $row['tipo_resíduo']; ?>"><?php echo $row['tipo_resíduo']; ?></option>
-                                                    <option value="Reciclável">Reciclável</option>
-                                                    <option value="Reciclável">Reciclável</option>
+                                                    <option value="Reciclável">Reciclaveis</option>
+                                                    <option value="Rejeitos">Rejeitos</option>
+                                                    <option value="Organicos">Orgânicos</option>
+                                                    <option value="Perigosos">Perigosos</option>
                                                 </select>
                                             </div>
                                         </div>

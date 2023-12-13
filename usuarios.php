@@ -90,9 +90,23 @@ if (empty($id)) {
                                             <div class="row">
                                                 <div class="col">
                                                     <label class="col-sm-6 col-form-label">Cargo</label>
-                                                    <div class="col-sm-10">
-                                                    <input class="form-control" type="text" name="cargo" id="cargo" placeholder="Digite seu Cargo" id="example-text-input">
-  
+                                                    
+                                                    <div class="row">
+                                        <div class="col">
+                                            <label class="col-sm-6 col-form-label">Cargo</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-select" aria-label="Default select example"
+                                                    name="cargo" id="cargo">
+                                                    <option value="Gestor">Gestor</option>
+                                                    <option value="Secretário Adjunto">Secretário Adjunto</option>
+                                                    <option value="Assessor">Assessor</option>
+                                                    <option value="Diretor">Diretor</option>
+                                                    <option value="Técnico Ambiental">Técnico Ambiental</option>
+                                                    <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
+                                                    <option value="Auxiliar Serviços Gerais">Auxiliar Serviços Gerais</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col">

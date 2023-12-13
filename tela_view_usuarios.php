@@ -87,8 +87,8 @@ if (empty($id)) {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="nivel" id="nivel">
                                                     <option selected="<?php echo $row['nivel']; ?>"><?php echo $row['nivel']; ?></option>
-                                                    <option value="admin">Admin</option>
-                                                    <option value="usuario">Usuario</option>
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="Usuario">Usuario</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -101,9 +101,13 @@ if (empty($id)) {
                                                 <select class="form-select" aria-label="Default select example"
                                                     name="cargo" id="cargo">
                                                    <option selected="<?php echo $row['cargo']; ?>"><?php echo $row['cargo']; ?></option> 
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
+                                                    <option value="Gestor">Gestor</option>
+                                                    <option value="Secretário Adjunto">Secretário Adjunto</option>
+                                                    <option value="Assessor">Assessor</option>
+                                                    <option value="Diretor">Diretor</option>
+                                                    <option value="Técnico Ambiental">Técnico Ambiental</option>
+                                                    <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
+                                                    <option value="Auxiliar Serviços Gerais">Auxiliar Serviços Gerais</option>
                                                 </select>
                                             </div>
                                         </div>

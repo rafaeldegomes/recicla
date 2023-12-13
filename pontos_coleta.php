@@ -456,7 +456,7 @@ if (empty($id) || $nivel == "usuario") {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Resíduo atualizado com sucesso',
+                    title: 'Pontos de Coleta atualizado com sucesso',
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -466,7 +466,7 @@ if (empty($id) || $nivel == "usuario") {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Resíduo atualizado com sucesso',
+                    title: 'Pontos de Coleta atualizado com sucesso',
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -476,7 +476,7 @@ if (empty($id) || $nivel == "usuario") {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Resiíduo cadastrado com sucesso',
+                    title: 'Ponto de Coleta cadastrado com sucesso',
                     showConfirmButton: false,
                     timer: 1500
                 })

@@ -144,9 +144,9 @@ if (empty($id) || $nivel == "usuario") {
                                                     <option selected="<?php echo $row['numero_risco']; ?>"><?php echo $row['numero_risco']; ?></option>
 
                                                     <option value="3090">3090</option>
-                                                    <option value="2">3091</option>
-                                                    <option value="3">3480</option>
-                                                    <option value="3">3481</option>
+                                                    <option value="3091">3091</option>
+                                                    <option value="3480">3480</option>
+                                                    <option value="3481">3481</option>
 
                                                 </select>
                                             </div>
@@ -158,9 +158,9 @@ if (empty($id) || $nivel == "usuario") {
                                                     name="grupo_embalagem" id="grupo_embalagem">
                                                     <option selected="<?php echo $row['grupo_embalagem']; ?>"><?php echo $row['grupo_embalagem']; ?></option>
 
-                                                    <option value="1">Grupo de Embalagem I - Substâncias que apresentam alto risco</option>
-                                                    <option value="2">Grupo de Embalagem II - Substâncias que apresentam médio risco</option>
-                                                    <option value="3">Grupo de Embalagem III - Substâncias que apresentam baixo risco</option>
+                                                    <option value="Grupo de Embalagem I - Substâncias que apresentam alto risco">Grupo de Embalagem I - Substâncias que apresentam alto risco</option>
+                                                    <option value="Grupo de Embalagem II - Substâncias que apresentam médio risco">Grupo de Embalagem II - Substâncias que apresentam médio risco</option>
+                                                    <option value="Grupo de Embalagem III - Substâncias que apresentam baixo risco">Grupo de Embalagem III - Substâncias que apresentam baixo risco</option>
                                                 </select>
                                             </div>
                                         </div>

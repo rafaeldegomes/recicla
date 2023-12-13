@@ -35,10 +35,10 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-sm-12">
                     <div>
-                        <div class="text-center mb-4">
+                        <div class="text-center mb-2">
                             <a href="index.html" class="">
-                                <img src="assets/images/logofinalsite.png" alt="" height="100" class="auth-logo logo-dark mx-auto">
-                                <img src="assets/images/logofinalsite.png" alt="" height="100" class="auth-logo logo-light mx-auto">
+                                <img src="logo.png" alt="" height="180" class="auth-logo logo-dark mx-auto">
+                                <img src="logo.png" alt="" height="180" class="auth-logo logo-light mx-auto">
                             </a>
                         </div>
 
